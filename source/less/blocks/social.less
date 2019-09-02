@@ -1,0 +1,90 @@
+.social {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.social__list {
+  padding: 16px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 0;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+.social__item {
+  list-style: none;
+  width: 10px;
+  height: 13px;
+  margin: 0 7px;
+}
+
+.social__link {
+  width: 10px;
+  height: 13px;
+}
+
+.link-icon {
+  width: 10px;
+  height: 13px;
+  fill: #cccccc;
+}
+
+.link-icon:hover {
+  fill: #48974c;
+}
+
+@media (min-width: 768px) {
+  .social {
+    border: none;
+    min-width: 124px;
+    margin: 0 auto;
+    min-height: 37px;
+    max-width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .social__list {
+    padding: 0;
+  }
+
+  .social__item {
+    list-style: none;
+    width: 18px;
+    height: 19px;
+    margin: 0 7px;
+  }
+
+  .social__link {
+    width: 18px;
+    height: 29px;
+  }
+
+  .link-icon {
+    width: 18px;
+    height: 19px;
+  }
+}
+
+//десктопная версия
+@media (min-width: 1300px) {
+  .social__item {
+    list-style: none;
+    width: 23px;
+    height: 19px;
+    margin: 0 7px;
+  }
+
+  .social__link {
+    width: 23px;
+    height: 19px;
+  }
+
+  .link-icon {
+    width: 23px;
+    height: 19px;
+  }
+}

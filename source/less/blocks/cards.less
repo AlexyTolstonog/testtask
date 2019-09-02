@@ -1,0 +1,66 @@
+.cards {
+  width: 280px;
+  /*ширина для мобильного*/
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  background-color: #f8f8f8;
+}
+
+.cards__container {
+  padding-top: 20px;
+}
+
+.cards__container--small {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+//планшетная версия
+@media (min-width: 768px) {
+  .cards {
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .cards__container--big {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cards__container--small {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1300px) {
+  .cards {
+    flex-direction: row;
+    align-items: flex-start;
+    width: 1220px;
+  }
+
+  .cards__container {
+    width: 48%;
+    padding-top: 18px;
+  }
+
+  .cards__container--big {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,149 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  width: 100%;
+  /*ширина для мобильного*/
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+}
+
+/* Картинка мастабируется по отношению к родительскому элементу */
+.slider__item img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+/* Кнопки вперед и назад */
+.slider .prev,
+.slider .next {
+  cursor: pointer;
+  position: absolute;
+  top: 25%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.slider .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* При наведении на кнопки добавляем фон кнопок */
+.slider .prev:hover,
+.slider .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slider__item-container {
+  position: relative;
+  padding: 20px;
+  background: white;
+}
+
+.slider__item-container-headline {
+  color: #404040;
+  font-family: "Cormorantinfant", "Arial", sans-serif;
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 45px;
+  letter-spacing: 0.3px;
+}
+
+.slider__item-container-text {
+  color: #404040;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.09px;
+}
+
+.slider-dots {
+  text-align: center;
+}
+
+.slider-dots_item {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color: #dddddd;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.slider-dots_item:hover {
+  background-color: #aaaaaa;
+}
+
+/* Анимация слайдов */
+.slider__item {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+//планшетная версия
+@media (min-width: 768px) {
+  .slider {
+    min-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+//десктопная версия
+@media (min-width: 1300px) {
+  .slider {
+    min-width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  .slider__item-wrapper {
+    position: relative;
+  }
+
+  .slider__item-container {
+    position: absolute;
+    width: 458px;
+    min-height: 270px;
+    padding: 43px;
+    background: #ffffff;
+    top: 13%;
+    left: 10%;
+  }
+
+  .slider__item-container-headline {
+    font-size: 60px;
+  }
+
+  .slider__item img {
+    height: 579px;
+  }
+
+  .slider-dots {
+    position: absolute;
+    top: 80%;
+    left: 12%;
+  }
+}

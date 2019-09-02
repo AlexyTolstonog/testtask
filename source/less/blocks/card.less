@@ -1,0 +1,235 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 184px;
+  background-color: white;
+  border: 1px solid #e6e6e6;
+}
+
+.card--small {
+  align-items: flex-start;
+  padding: 25px;
+}
+
+
+.card__image {
+  width: 280px;
+  height: 280px;
+}
+
+.card__image--small {
+  width: 226px;
+  height: 150px;
+}
+
+.card__date {
+  align-self: flex-start;
+  position: relative;
+  margin-left: 20px;
+}
+
+.card__date::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icon-calendar.png");
+  width: 15px;
+  height: 16px;
+  left: -20px;
+}
+
+.card__header {
+  color: #262626;
+  font-family: "Cormorantinfant", "Arial", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  font-style: italic;
+  margin: 10px auto;
+  align-self: flex-start;
+  margin-left: 0;
+}
+
+.card--small .card__header {
+  color: #262626;
+  font-family: "Cormorantinfant", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.12px;
+}
+
+.card__description {
+  color: #737373;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.08px;
+}
+
+.card--small .card__description {
+  width: 226px;
+}
+
+.card__button {
+  color: #ffffff;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  background-color: #48974c;
+  display: flex;
+  padding: 21px 121px;
+  position: relative;
+  margin-top: 24px;
+}
+
+.card__button::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/icon-bigger-arrow.png");
+  width: 10px;
+  height: 10px;
+  background-repeat: no-repeat;
+  right: 109px;
+  top: 27px;
+}
+
+.card--small .card__link {
+  color: #48974c;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.06px;
+  position: relative;
+  margin-left: 20px;
+}
+
+.card--small .card__link::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  border-radius: 50%;
+  top: 0;
+  left: -29px;
+}
+
+.card--small .card__link::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icon-small-arrow.png");
+  background-repeat: no-repeat;
+  width: 6px;
+  height: 10px;
+  top: 5px;
+  color: white;
+  left: -20px;
+}
+
+.card__interactive-button {
+  color: #48974c;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.07px;
+  padding: 16px 33px;
+  border: 1px solid #48974c;
+
+  &:hover {
+    background: #48974c;
+    border: 1px solid white;
+    color: white;
+  }
+}
+
+.card__interactive {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+//паншетная версия
+@media (min-width: 768px) {
+  .card {
+    border: 1px solid #e6e6e6;
+  }
+
+  .card--big {
+    width: 44%;
+  }
+
+  .card__image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+//десктопная версия
+@media (min-width: 1300px) {
+  .card {
+    padding: 0;
+    border: none;
+  }
+
+  .card__image--big {
+    width: 502px;
+    height: 321px;
+  }
+
+  .card__image--small {
+    width: 226px;
+    height: 163px;
+  }
+
+  .card--small .card__header {
+    margin-bottom: 0;
+    margin-top: 28px;
+  }
+
+  .card__description {
+    margin: 7px 0;
+  }
+
+  .card--big {
+    width: 502px;
+    height: auto;
+    padding: 25px;
+  }
+
+  .card--small {
+    padding: 25px;
+    border: 1px solid #e6e6e6;
+  }
+
+  .card--big:nth-child(2) {
+    margin-top: 30px;
+  }
+
+  .card__button {
+    font-size: 14px;
+    background-color: #48974c;
+    display: flex;
+    padding: 16px 52px;
+    position: relative;
+    margin-top: 24px;
+    color: #ffffff;
+    width: 53px;
+    margin-left: 26px;
+
+    &::before {
+      right: 45px;
+      top: 22px;
+    }
+  }
+}
