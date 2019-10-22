@@ -1,442 +1,241 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="preload"
+      href="fonts/oswaldmedium.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/oswaldregular.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link href="css/style.min.css" rel="stylesheet" />
+    <script>
+      document.createElement("picture");
+    </script>
+    <script src="js/picturefill.min.js" async></script>
+    <title>Some__test</title>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="preload" href="fonts/Cormorantinfant.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/Cormorantinfantitalic.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
-  <link href="css/style.min.css" rel="stylesheet">
-  <script>
-    document.createElement("picture");
-
-  </script>
-  <script src="js/picturefill.min.js" async></script>
-  <title>some test</title>
-</head>
-
-<body>
-  <div style="display:none">
-    <include src="build/img/sprite.svg"></include>
-  </div>
-  <header class="header">
-    <div class="header__container">
-      <a class="header__container-linck" href="index.html">
-        <h1 class="header__container-linck-header"> Храм святого преподобного Саввы Сторожевского</h1>
-        <p class="header__container-linck-text">Местная религиозная организация
-          Московской епархии Русской Православной Церкви (Московский Патриархат)</p>
-      </a>
-
-
-      <nav class="navigation navigation--closed navigation--nojs">
-        <button class="navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="navigation__wrapper">
-          <ul class="navigation__list">
-            <li class="navigation__item navigation__item--active">Главная</li>
-            <li class="navigation__item"><a class="navigation__item-link" href="#"> прп. Савва сторожевский
-              </a></li>
-            <li class="navigation__item"><a class="navigation__item-link" href="#"> жизнь прихода </a></li>
-            <li class="navigation__item"><a class="navigation__item-link" href="#">фотоальбом </a></li>
-            <li class="navigation__item"><a class="navigation__item-link" href="#">контакты </a></li>
-            <li class="navigation__item"><a class="navigation__item-link" href="#">пожертвования</a></li>
-          </ul>
-        </div>
-      </nav>
+  <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
     </div>
-  </header>
-
-  <main class="main">
-    <section class="slider">
-      <div class="slider__item">
-        <img src="img/slide-image1.png" alt="Первый слайд">
-      </div>
-
-      <div class="slider__item">
-        <img src="img/slider-image2.png" alt="Второй слайд">
-
-      </div>
-
-
-      <div class="slider__arrow">
-      <a class="prev" onclick="minusSlide()">&#10094;</a>
-      <a class="next" onclick="plusSlide()">&#10095;</a>
-    </div>
-      <div class="slider-dots">
-        <span class="slider-dots_item" onclick="currentSlide(1)"></span>
-        <span class="slider-dots_item" onclick="currentSlide(2)"></span>
-        <span class="slider-dots_item" onclick="currentSlide(3)"></span>
-      </div>
-
-
-      <div class="slider__item-container">
-      <div class="slider__item-container-headline">Дорогие братья
-          и сестры</div>
-      <div class="slider__item-container-text">Приглашаем детей в возрасте от 5 лет для занятий в воскресной
-          группе при храме преподобного Саввы Сторожевского.
-          Занятия начнутся с октября 2016 года.
-          Запись в группу осуществляется по воскресеньям с 13-14 часов.</div>
-      </div>
-    </section>
-
-    <section class="info">
-      <div class="info__content">
-        <div class="cards">
-
-
-          <div class="cards__container cards__container--big">
-
-            <div class="card card--big">
-              <img src="img/info-big1-img.png" class="card__image card__image--big" alt="Освящение закладного камня" width="502"
-                height="321">
-              <p class="card__date">7 фев 2017</p>
-              <h2 class="card__header">Освящение закладного камня</h2>
-              <p class="card__description">7 февраля 2016 года в 14.00 прихожане строящегося храма в честь преподобного
-                Саввы Сторожевского встречали владыку Пантелеимона, епископа Орехово-Зуевского. Жители нашего района
-                собрались
-                на чин освящения закладного камня в фундамент будущего храма. Это поистине историческое событие для
-                жителей нашего района и города в целом.
-                Храм преподобного Саввы Сторожевского... великого подвижника и ученика преподобного Сергия Радонежского,
-                станет единственным в нашей столице.</p>
-              <div class="card__interactive">
-                <a class="card__interactive-button" href="#">Подробнее</a>
-                <ul class="social__list">
-                  <li class="social__item"><a href="#" class="social__link social__link--vk">
-                      <svg focusable="false" class="link-icon" width="12" height="19">
-                        <use xlink:href="#icon-vka"></use>
-                      </svg>
-                    </a></li>
-                  <li class="social__item"><a href="#" class="social__link social__link--odnokl">
-                      <svg focusable="false" class="link-icon" width="12" height="19">
-                        <use xlink:href="#icon-odnok"></use>
-                      </svg>
-                    </a></li>
-                  <li class="social__item"><a href="#" class="social__link social__link--twitter">
-                      <svg focusable="false" class="link-icon" width="12" height="19">
-                        <use xlink:href="#icon-twi"></use>
-                      </svg>
-                    </a></li>
-                  <li class="social__item"><a href="#" class="social__link social__link--facebook">
-                      <svg focusable="false" class="link-icon" width="12" height="19">
-                        <use xlink:href="#icon-face"></use>
-                      </svg>
-                    </a></li>
-                  <li class="social__item"><a href="#" class="social__link social__link--insta">
-                      <svg focusable="false" class="link-icon" width="12" height="19">
-                        <use xlink:href="#icon-inst"></use>
-                      </svg>
-                    </a></li>
-
-                </ul>
-              </div>
-            </div>
-
-            <div class="card card--big">
-              <img src="img/info-big2-img.png" class="card__image card__image--big" alt="Освящение закладного камня" width="502"
-                height="321">
-              <p class="card__date">11 фев 2017</p>
-              <h2 class="card__header">Визит Ресина В.И.</h2>
-              <p class="card__description">2 февраля 2017 года строительную площадку храма преподобного Саввы
-                Сторожевского
-                в Измайлово посетили член комитета Госдумы по земельным отношениям и строительству,
-                советник Святейшего Патриарха Московского и всея Руси Кирилла, Владимир Иосифович Ресин.
-                Вместе с ним строящийся храм посетил архимандрит Илия.
-                В ходе визита были отмечены значительные успехи строительства и обсуждены ближайшие
-                планы продолжения работ.</p>
-              <div class="card__interactive">
-                <a class="card__interactive-button" href="#">Подробнее</a>
-                <ul class="social__list">
-                  <li class="social__item"><a href="#" class="social__link social__link--vk">
-                      <svg focusable="false" class="link-icon" width="12" height="19">
-                        <use xlink:href="#icon-vka"></use>
-                      </svg>
-                    </a></li>
-                  <li class="social__item"><a href="#" class="social__link social__link--odnokl">
-                      <svg focusable="false" class="link-icon" width="12" height="19">
-                        <use xlink:href="#icon-odnok"></use>
-                      </svg>
-                    </a></li>
-                  <li class="social__item"><a href="#" class="social__link social__link--twitter">
-                      <svg focusable="false" class="link-icon" width="12" height="19">
-                        <use xlink:href="#icon-twi"></use>
-                      </svg>
-                    </a></li>
-                  <li class="social__item"><a href="#" class="social__link social__link--facebook">
-                      <svg focusable="false" class="link-icon" width="12" height="19">
-                        <use xlink:href="#icon-face"></use>
-                      </svg>
-                    </a></li>
-                  <li class="social__item"><a href="#" class="social__link social__link--insta">
-                      <svg focusable="false" class="link-icon" width="12" height="19">
-                        <use xlink:href="#icon-inst"></use>
-                      </svg>
-                    </a></li>
-
-                </ul>
-              </div>
-
-            </div>
-
-            <a href="#" class="card__button">Ранее</a>
-          </div>
-
-          <div class="cards__container cards__container--small">
-            <div class="card card--small">
-              <img src="img/image-small1.png" class="card__image card__image--small" alt="awdawd" width="226"
-                height="150">
-              <h2 class="card__header">Молебен 19.02.2017</h2>
-              <p class="card__description">19 февраля в этом году совпадает с неделей о Страшном Суде...</p>
-              <a href="#" class="card__link">Подробнее</a>
-            </div>
-
-            <div class="card card--small">
-              <img src="img/image-small1.png" class="card__image card__image--small" alt="awdawd" width="226"
-                height="150">
-              <h2 class="card__header">Молебен 19.02.2017</h2>
-              <p class="card__description">19 февраля в этом году совпадает с неделей о Страшном Суде...</p>
-              <a href="#" class="card__link">Подробнее</a>
-            </div>
-
-            <div class="card card--small">
-              <img src="img/image-small1.png" class="card__image card__image--small" alt="awdawd" width="226"
-                height="150">
-              <h2 class="card__header">Молебен 19.02.2017</h2>
-              <p class="card__description">19 февраля в этом году совпадает с неделей о Страшном Суде...</p>
-              <a href="#" class="card__link">Подробнее</a>
-            </div>
-
-            <div class="card card--small">
-              <img src="img/image-small1.png" class="card__image card__image--small" alt="awdawd" width="226"
-                height="150">
-              <h2 class="card__header">Молебен 19.02.2017</h2>
-              <p class="card__description">19 февраля в этом году совпадает с неделей о Страшном Суде...</p>
-              <a href="#" class="card__link">Подробнее</a>
-            </div>
-
-            <div class="card card--small">
-              <img src="img/image-small1.png" class="card__image card__image--small" alt="awdawd" width="226"
-                height="150">
-              <h2 class="card__header">Молебен 19.02.2017</h2>
-              <p class="card__description">19 февраля в этом году совпадает с неделей о Страшном Суде...</p>
-              <a href="#" class="card__link">Подробнее</a>
-            </div>
-
-            <div class="card card--small">
-              <img src="img/image-small1.png" class="card__image card__image--small" alt="awdawd" width="226"
-                height="150">
-              <h2 class="card__header">Молебен 19.02.2017</h2>
-              <p class="card__description">19 февраля в этом году совпадает с неделей о Страшном Суде...</p>
-              <a href="#" class="card__link">Подробнее</a>
-            </div>
-
-            <div class="card card--small">
-              <img src="img/image-small1.png" class="card__image card__image--small" alt="awdawd" width="226"
-                height="150">
-              <h2 class="card__header">Молебен 19.02.2017</h2>
-              <p class="card__description">19 февраля в этом году совпадает с неделей о Страшном Суде...</p>
-              <a href="#" class="card__link">Подробнее</a>
-            </div>
-
-            <div class="card card--small">
-              <img src="img/image-small1.png" class="card__image card__image--small" alt="awdawd" width="226"
-                height="150">
-              <h2 class="card__header">Молебен 19.02.2017</h2>
-              <p class="card__description">19 февраля в этом году совпадает с неделей о Страшном Суде...</p>
-              <a href="#" class="card__link">Подробнее</a>
-            </div>
-            <ul class="paginator">
-              <!--Реализация переключателя в с помощью ссылок-->
-              <li class="paginator-prev"> <a class="paginator-link paginator-link-prev" href="#">
-                  <svg focusable="false" class="link-icon" width="12" height="19">
-                    <use xlink:href="#icon-prev-arrow"></use>
-                  </svg>
-                </a></li>
-
-              <li class="paginator-pages"> <a class="paginator-link paginator-pages-link  pages-link-active"
-                  href="#">1<span class="visually-hidden">Первая страница</span></a></li>
-              <li class="paginator-pages"> <a class="paginator-link paginator-pages-link" href="#">2<span
-                    class="visually-hidden">Вторая страница</span></a></li>
-              <li class="paginator-pages"> <a class="paginator-link paginator-pages-link" href="#">3<span
-                    class="visually-hidden">Третья страница</span></a></li>
-                    <li class="paginator-pages"> <a class="paginator-link paginator-pages-link" href="#">4<span
-                      class="visually-hidden">Четвертая страница</span></a></li>
-              <li class="paginator-pages">...<span class="visually-hidden">...</span></li>
-              <li class="paginator-pages"> <a class="paginator-link paginator-pages-link" href="#">12<span
-                    class="visually-hidden">Двенадцатая страница</span></a></li>
-
-              <li class="paginator-next"> <a class="paginator-link paginator-link-next" href="#"></a>
-                <svg focusable="false" class="link-icon" width="12" height="19">
-                  <use xlink:href="#icon-next-arrow"></use>
-                </svg>
+    <header class="header">
+      <div class="header__container">
+        <a class="header__logo" href="#">
+          <picture>
+            <img
+              src="//polarfox-soft.com/wp-content/uploads/2016/04/polar_log_site2-2.png"
+              alt="PolarFoxSoft"
+              class="header__logo-image"
+            />
+          </picture>
+        </a>
+        <nav class="navigation navigation--closed navigation--nojs">
+          <button class="navigation__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="navigation__wrapper">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a class="navigation__item-link" href="#">Главная</a>
               </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="about">
-        <div class="about__info">
-          <div class="about__info-buttons">
-            <a class="about__info-button about__info-button--white" href="#">Ход строительства</a>
-            <a class="about__info-button about__info-button--green" href="#">Подробнее</a>
-          </div>
-        </div>
-        <div class="about__banner">
-          <div class="about__banner-faceboock">
-            <a class="about__banner-faceboock-link" href="#">
-              <h3 class="about__banner-faceboock-headline">Facebook</h3>
-              <img class="about__banner-faceboock-image" src="img/faceboock-info.png" alt="Ход строительства"
-                width="288" height="152">
-          </div>
-          </a>
-          <div class="about__banner-banner">
-            <p class="about__banner-banner-text">Banner</p>
-          </div>
-        </div>
-
-      </div>
-
-
-    </section>
-
-
-  </main>
-  <footer class="footer">
-    <div class="footer__container">
-      <div class="footer__container-top">
-        <div class="footer__text-container">
-          <a class="footer__text-link" href="#">Храм святого преподобного
-            Саввы Сторожевского</a>
-          <p class="footer__text-description">
-            Местная религиозная организация
-            Московской епархии Русской Православной Церкви
-            (Московский Патриархат)
-          </p>
-        </div>
-
-        <nav class="footer__navigation">
-          <div class="footer__navigation-wrapper">
-            <ul class="footer__navigation-list">
-              <li class="footer__navigation-item"><a class="footer__navigation-item-link" href="index.html">Главная</a>
+              <li class="navigation__item ">
+                <a class="navigation__item-link" href="#">Каталог продукции</a>
               </li>
-              <li class="footer__navigation-item"><a class="footer__navigation-item-link" href="#"> прп. Савва
-                  сторожевский
-                </a></li>
-              <li class="footer__navigation-item"><a class="footer__navigation-item-link" href="#"> жизнь прихода </a>
+              <li class="navigation__item navigation__item--active">
+                <a class="navigation__item-link" href="#">Подбор программы</a>
               </li>
-              <li class="footer__navigation-item"><a class="footer__navigation-item-link" href="#">фотоальбом </a></li>
-              <li class="footer__navigation-item"><a class="footer__navigation-item-link" href="#">контакты </a></li>
-              <li class="footer__navigation-item"><a class="footer__navigation-item-link" href="#">пожертвования</a>
+              <li class="navigation__item ">
+                <a class="navigation__item-link" href="#">Наши партнеры</a>
+              </li>
+              <li class="navigation__item ">
+                <a class="navigation__item-link" href="#">О нас</a>
               </li>
             </ul>
           </div>
         </nav>
+      </div>
+    </header>
 
-        <div class="footer__interactive">
+    <main class="main">
+      <section class="form">
+          <div class="form__about">
+
+            <fieldset class="form__container form__container--about">
+              <h1 class="form__title">Идейные соображения</h1>
+              <p class="form__title-text">
+                Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности
+             </p>
+              <div class="form__container form__container-send">
+                <button type="submit" class="button form__send-button form__send-button--open">Отправить заявку</button>
+                          </div>
+                          <div class="form__container-checkbox">
+                            <input id="check-1" class="form__input form__input--checkbox" type="checkbox" checked="">
+                            <label class="form__label form__label--checkbox" for="check-1" tabindex="0">Some text</label>
+                          </div>
+            </fieldset>
+
+            <fieldset class="form__container form__container--about">
+              <h1 class="form__title">Идейные соображения</h1>
+              <p class="form__title-text">
+                Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности
+              </p>
+              <div class="form__container form__container-send">
+                <button type="submit" class="button form__send-button form__send-button--open">Отправить заявку</button>
+              </div>
+                <div class="form__container-checkbox">
+                  <input id="check-2" class="form__input form__input--checkbox" type="checkbox" checked="">
+                  <label class="form__label form__label--checkbox" for="check-2" tabindex="0">Some text</label>
+                </div>
+
+            </fieldset>
+
+            <fieldset class="form__container form__container--about">
+              <h1 class="form__title">Идейные соображения</h1>
+              <p class="form__title-text">
+                Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности
+              </p>
+              <div class="form__container form__container-send">
+                <button type="submit" class="button form__send-button form__send-button--open">Отправить заявку</button>
+              </div>
+                <div class="form__container-checkbox">
+                  <input id="check-3" class="form__input form__input--checkbox" type="checkbox" checked="">
+                  <label class="form__label form__label--checkbox" for="check-3" tabindex="0">Some text</label>
+                </div>
+
+            </fieldset>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="cooperation">
+        <div class="wrap">
+          <div class="cooperation__block cooperation__block--form">
+            <h3 class="cooperation__title">
+              Приглашаем к сотрудничеству!
+            </h3>
+            <p class="cooperation__text">
+              пр.О.Поля, буд. 12 Днепр
+            </p>
+          </div>
+        </div>
+        <div class="cooperation__map">
+          <iframe
+            class="cooperation__map-item"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2646.3930657424767!2d35.01794381562497!3d48.448987379249544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1571737078183!5m2!1sru!2sua"
+            width="600"
+            height="450"
+            frameborder="0"
+            style="border:0;"
+            allowfullscreen=""
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__logo">
+          <a class="footer__logo-link" href="#"
+            ><img
+              class="footer__logo-link-image"
+              src="//polarfox-soft.com/wp-content/uploads/2016/04/polar_log_site2-2.png"
+              alt="PolarFoxSoft"
+          /></a>
+        </div>
+        <div class="social">
           <ul class="social__list">
-            <li class="social__item"><a href="#" class="social__link social__link--vk">
-                <svg focusable="false" class="link-icon" width="12" height="19">
-                  <use xlink:href="#icon-vka"></use>
+            <li class="social__item">
+              <a href="#" class="social__link social__link--vkontakte">
+                <svg class="link-icon" width="32" height="32">
+                  <use xlink:href="#icon-vk"></use>
                 </svg>
-              </a></li>
-            <li class="social__item"><a href="#" class="social__link social__link--odnokl">
-                <svg focusable="false" class="link-icon" width="12" height="19">
-                  <use xlink:href="#icon-odnok"></use>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__link--instagram">
+                <svg class="link-icon" width="32" height="32">
+                  <use xlink:href="#icon-insta-mobile"></use>
                 </svg>
-              </a></li>
-            <li class="social__item"><a href="#" class="social__link social__link--twitter">
-                <svg focusable="false" class="link-icon" width="12" height="19">
-                  <use xlink:href="#icon-twi"></use>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__link--facebook">
+                <svg focusable="false" class="link-icon" width="32" height="32">
+                  <use xlink:href="#icon-fb"></use>
                 </svg>
-              </a></li>
-            <li class="social__item"><a href="#" class="social__link social__link--facebook">
-                <svg focusable="false" class="link-icon" width="12" height="19">
-                  <use xlink:href="#icon-face"></use>
-                </svg>
-              </a></li>
-            <li class="social__item"><a href="#" class="social__link social__link--insta">
-                <svg focusable="false" class="link-icon" width="12" height="19">
-                  <use xlink:href="#icon-inst"></use>
-                </svg>
-              </a></li>
+              </a>
+            </li>
           </ul>
-          <img class="footer__interactive-image" src="img/some-icon.png" alt="some-icon" width="88" height="31">
         </div>
       </div>
-
-
-      <div class="footer__copyright">
-        <a class="footer__copyright-link" href="#">
-          <span class="footer__copyright-text">© 2017 Храм святого преподобного Саввы Сторожевского</span>
-        </a>
+    </footer>
+    <section class="modal-feedback" id="feedbak">
+          <svg class="btn-close-fedback form__input-icon" width="32" height="32">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+            <span class="visually-hidden">Закрыть</span></button>
+      <div class="feedback-form">
+          <form  class="form__contact-wrapper" method="post" action="http://polarfox-soft.com/test-task.php" enctype="multipart/form-data">
+            <fieldset class="form__container form__container--about">
+              <label class="form__label form__label--info">
+                <span class="form__label-text">Имя:*</span>
+                <input class="form__input form__input--info" name="name" type="text" id="name" type="text" placeholder="Барсик">
+              </label>
+            </fieldset>
+            <fieldset class="form__container form__container--about">
+              <label class="form__label form__label--info">
+                <span class="form__label-text">Фамилия*</span>
+                <input class="form__input form__input--info" name="soname" type="text" id="soname" type="text" placeholder="Барсик">
+              </label>
+              </fieldset>
+              <fieldset class="form__container form__container--about">
+              <label class="form__label form__label--info">
+                <span class="form__label-text">E-mail</span>
+                <input class="form__input form__input--info" name="email" type="email" id="email" type="text" placeholder="7">
+              </label>
+              </fieldset>
+              <fieldset class="form__container form__container--about">
+              <label class="form__label form__label--info">
+                <span class="form__label-text">Телефон:*</span>
+                <input class="form__input form__input--data" name="telephone" type="tel" id="telephone" type="tel" placeholder="8 (960) 900-60-90">
+              </label>
+              </fieldset>
+              <fieldset class="form__container form__container--about">
+              <button class="button form__send-button form__send-button--send" id="send" type="submit">Отправить</button>
+              <button class="button form__delete-button" id="delete" type="reset">Удалить</button>
+              </fieldset>
+          </form>
       </div>
+  </section>
+    <script>
+      var navMain = document.querySelector(".navigation");
+      var navToggle = document.querySelector(".navigation__toggle");
 
+      navMain.classList.remove("navigation--nojs");
 
-    </div>
-  </footer>
-
-
-  <script>
-    var navMain = document.querySelector('.navigation');
-    var navToggle = document.querySelector('.navigation__toggle');
-
-    navMain.classList.remove('navigation--nojs');
-
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('navigation--closed')) {
-        navMain.classList.remove('navigation--closed');
-        navMain.classList.add('navigation--opened');
-      } else {
-        navMain.classList.add('navigation--closed');
-        navMain.classList.remove('navigation--opened');
-      }
-    });
-
-
-    /* slider */navMain/* Индекс слайда по умолчанию */
-var slideIndex = 1;
-showSlides(slideIndex);
-
-/* Функция увеличивает индекс на 1, показывает следующй слайд*/
-function plusSlide() {
-    showSlides(slideIndex += 1);
-}
-
-/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
-function minusSlide() {
-    showSlides(slideIndex -= 1);
-}
-
-/* Устанавливает текущий слайд */
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-/* Основная функция сладера */
-function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("slider__item");
-    var dots = document.getElementsByClassName("slider-dots_item");
-    if (n > slides.length) {
-      slideIndex = 1
-    }
-    if (n < 1) {
-        slideIndex = slides.length
-    }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-}
-
-  </script>
-  <script src="js/svgxuse.min.js"></script>
-  <script src="js/svgforeverybody.min.js"> </script>
-
-</body>
-
+      navToggle.addEventListener("click", function() {
+        if (navMain.classList.contains("navigation--closed")) {
+          navMain.classList.remove("navigation--closed");
+          navMain.classList.add("navigation--opened");
+        } else {
+          navMain.classList.add("navigation--closed");
+          navMain.classList.remove("navigation--opened");
+        }
+      });
+    </script>
+    <script src="js/svgxuse.min.js"></script>
+    <script src="js/svgforeverybody.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/backend.js"></script>
+  </body>
 </html>

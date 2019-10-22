@@ -9,16 +9,6 @@
   position: relative;
 }
 
-.navigation__item--active {
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  text-transform: uppercase;
-  letter-spacing: 0.08px;
-  color: #48974c;
-}
-
 @media (max-width: 767px) {
   /* стилизация выпадающего меню*/
 
@@ -111,21 +101,11 @@
   }
 
   .navigation__item-link {
-    color: #262626;
-    font-family: "PT Sans", "Arial", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
+    color: #111111;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
     text-transform: uppercase;
-    letter-spacing: 0.08px;
-
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:active {
-      color: #48974c;
-    }
   }
 
   /*скрытые состояния меню*/
@@ -150,16 +130,11 @@
     flex-grow: 1;
     flex-wrap: wrap;
     align-items: flex-end;
-    max-width: 100%;
-    border-top: 1px solid #e6e6e6;
+    max-width: 62%;
   }
 
   .navigation__toggle {
     display: none;
-  }
-
-  .navigation__wrapper {
-    margin: 0 auto;
   }
 
   .navigation__list {
@@ -168,7 +143,6 @@
     flex-direction: row;
     margin-top: 20px;
     margin-bottom: 7px;
-    justify-content: center;
   }
 
   .navigation__item {
@@ -194,50 +168,57 @@
     }
 
     &:active {
-      color: #48974c;
+      opacity: 0.3;
     }
   }
 
   .navigation__item--active {
-    color: #48974c;
+    padding-bottom: 10px;
+    border-bottom: 2px solid#75bbfd;
   }
 }
 
+
 //десктопная версия
 @media (min-width: 1300px) {
-  .navigation {
-    margin-top: 26px;
-    max-width: 100%;
-  }
-
-  .navigation__wrapper {
-    margin: 0;
-    width: 100%;
-  }
-
-  .navigation__list {
-    justify-content: space-evenly;
-    margin-bottom: 0;
-    margin-top: 0;
-    border-top: 1px solid black;
-    padding-top: 18px;
-  }
-
-  .navigation__item-link {
-    color: #262626;
-    font-family: "PT Sans", "Arial", sans-serif;
-    font-size: 16px;
+  .header__container--image .navigation__item-link {
+    color: #ffffff;
+    font-size: 20px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 24.86px;
     text-transform: uppercase;
-    letter-spacing: 0.08px;
+
 
     &:hover {
       opacity: 0.6;
     }
 
     &:active {
-      color: #48974c;
+      opacity: 0.3;
     }
+  }
+
+  .navigation {
+    margin-top: 32px;
+  }
+
+  .navigation__item-link {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.86px;
+    text-transform: uppercase;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .header__container--image .navigation__item--active {
+    border-bottom: 2px solid white;
   }
 }
