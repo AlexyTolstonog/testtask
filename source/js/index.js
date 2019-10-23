@@ -14,7 +14,7 @@ prop.value = ``;
 const mailValidate = (prop) => {
   var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
   var inputText = prop.value;
-  if(reg.test(inputText) == false) {
+  if(reg.test(inputText) === false) {
      prop.placeholder='Введите корректный e-mail';
      clearField (prop);
      return false;
@@ -24,8 +24,8 @@ const mailValidate = (prop) => {
 const onlyLettersValidate = (prop) => {
   var reg =/^[a-zа-яё]+$/i;
   var inputText = prop.value;
-  if(reg.test(inputText) == false) {
-     prop.placeholder='Введите корректное значени';
+  if(reg.test(inputText) === false) {
+     prop.placeholder='Введите корректное значение';
      clearField (prop);
      return false;
   }
@@ -37,7 +37,7 @@ const onlyLettersValidate = (prop) => {
 const onlyNumbersValidate = (prop) => {
   var reg =/[0-9]/;
   var inputText = prop.value;
-  if(reg.test(inputText) == false) {
+  if(reg.test(inputText) === false) {
      prop.placeholder='Введите корректный номер';
      clearField (prop);
      return false;
