@@ -98,12 +98,13 @@ var formBlock = document.querySelector('.form__contact-wrapper');
 //  событие нажатия на кнопку отправки формы
 formBlock.addEventListener('submit', function (evt) {
   evt.preventDefault();
+  window.backend.upload(new FormData(formBlock), window.createSuccessUpload, window.backend.createEror);
+
   clearField (nameField);
   clearField (sonameField);
   clearField (emailField);
   clearField (telephoneField);
-  feedback.classList.remove(`show-modal-feedback`)
-  window.backend.upload(new FormData(formBlock), window.createSuccessUpload, window.backend.createEror);
+  feedback.classList.remove(`show-modal-feedback`);
 });
 } else {
   evt.preventDefault();
