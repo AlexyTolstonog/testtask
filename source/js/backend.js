@@ -5,36 +5,51 @@ const container = document.querySelector(`.main__container`);
 const video = document.querySelector(`.video`);
 const dots = document.querySelectorAll(`.slider-dots_item`);
 const slides = document.querySelectorAll(".item");
-const mainContainer =document.querySelector('.main__container');
+const mainContainer = document.querySelector('.main__container');
 const slider = document.querySelector(`.slider`);
 const button = document.querySelector(`.button--description`);
-const getSwitch = (index) =>{
+const DEBOUNCE_INTERVAL = 3000; // ms
+
+const debounce = function (cb) {
+  var lastTimeout = null;
+
+  return function () {
+    var parameters = arguments;
+    if (lastTimeout) {
+      window.clearTimeout(lastTimeout);
+    }
+    lastTimeout = window.setTimeout(function () {
+      cb.apply(null, parameters);
+    }, DEBOUNCE_INTERVAL);
+  };
+};
+const getSwitch = (index) => {
   switch (index) {
     case 1:
-      button.style.color="#FCBD2F";
-        button.style.border = "2px solid #FCBD2F";
+      button.style.color = "#FCBD2F";
+      button.style.border = "2px solid #FCBD2F";
       video.style.background = `url("../../img/screenshot_Defence.jpg")`;
       video.src = "img/Defense.mp4";
       container.style.background = `#FCBD2F url("../../img/background_Defence.png")`;
       break;
     case 2:
-        button.style.color="#56C02A";
-        button.style.border = "2px solid #56C02A";
-        video.style.background = `url("../../img/screenshot_Matcha.jpg")`;
+      button.style.color = "#56C02A";
+      button.style.border = "2px solid #56C02A";
+      video.style.background = `url("../../img/screenshot_Matcha.jpg")`;
       video.src = "img/Matcha.mp4";
       container.style.background = `#56C02A url("../../img/background_Matcha.png")`;
       break;
     case 3:
-        button.style.color="#F16276";
-        button.style.border = "2px solid #F16276";
-        video.style.background = `url("../../img/screenshot_Glow.jpg")`;
+      button.style.color = "#F16276";
+      button.style.border = "2px solid #F16276";
+      video.style.background = `url("../../img/screenshot_Glow.jpg")`;
       video.src = "img/Glow.mp4";
       container.style.background = `#F16276 url("../../img/background_Glow.png")`;
       break;
     case 4:
-        button.style.color="#DE7A25";
-        button.style.border = "2px solid #DE7A25";
-        video.style.background = `url("../../img/screenshot_Energise.jpg")`;
+      button.style.color = "#DE7A25";
+      button.style.border = "2px solid #DE7A25";
+      video.style.background = `url("../../img/screenshot_Energise.jpg")`;
       video.src = "img/Energise.mp4";
       container.style.background = `#DE7A25 url("../../img/background_Energise.png")`;
       break;
@@ -55,11 +70,11 @@ const showSlides = (n) => {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex - 1].style.display = "flex";
-  slides[slideIndex-1].classList.add(`swipe-right`);
+  slides[slideIndex - 1].classList.add(`swipe-right`);
   dots[slideIndex - 1].className += " active";
- getSwitch(slideIndex);
+  getSwitch(slideIndex);
 }
-/* Авто прокрутка слайдера */
+
 const autoSlider = () => {
   let i;
   for (i = 0; i < slides.length; i++) {
@@ -72,15 +87,15 @@ const autoSlider = () => {
 
   }
   slides[slideIndex - 1].style.display = "flex";
-  slides[slideIndex-1].classList.add(`swipe-right`);
+  slides[slideIndex - 1].classList.add(`swipe-right`);
   dots[slideIndex - 1].className += " active";
   getSwitch(slideIndex);
-  setTimeout(autoSlider, 3000);
-  mainContainer.removeEventListener(`mouseleave`,autoSlider);
-  //document.removeEventListener(`mouseenter`,autoSlider);
+  const debounseAutoSlider = debounce(autoSlider);
+  debounseAutoSlider();
+  mainContainer.removeEventListener(`mouseleave`, autoSlider);
 }
 
-mainContainer.addEventListener(`mouseleave`,autoSlider);
+mainContainer.addEventListener(`mouseleave`, autoSlider);
 
 function nextSlide() {
   showSlides(slideIndex += 1);
@@ -98,16 +113,11 @@ const onDotsCkick = (evt) => {
 }
 
 showSlides(slideIndex);
-//autoSlider();
 
 dots.forEach((elem) => {
   elem.addEventListener(`click`, onDotsCkick);
   elem.addEventListener(`touchstart`, onDotsCkick);
 });
-
-
-
-
 
 const onTouchStart = (evt) => {
   evt.preventDefault();
