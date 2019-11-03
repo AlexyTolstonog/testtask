@@ -25,11 +25,6 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
-gulp.task('js', function () {
-  return gulp.src('js/*.js')                 // get the files
-      .pipe(browserSync.stream())                 // browsersync stream
-});
-
 var gulp = require("gulp");
 var imagemin = require("gulp-imagemin");
 gulp.task("images", function () {
@@ -45,6 +40,13 @@ gulp.task("images", function () {
     ]))
     .pipe(gulp.dest("source/img"));
 });
+
+gulp.task('js', function () {
+  return gulp.src('js/*.js')                 // get the files
+      .pipe(browserSync.stream())                 // browsersync stream
+});
+
+
 
 var gulp = require("gulp");
 var webp = require("gulp-webp");
