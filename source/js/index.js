@@ -29,16 +29,16 @@ const getSwitch = (index) => {
     case 1:
       button.style.color = "#FCBD2F";
       button.style.border = "2px solid #FCBD2F";
-      videoContainer.style.background = 'url("../../img/screenshot_Defence.jpg")';
+      videoContainer.style.background = 'url("../img/screenshot_Defence.jpg")';
       video.src = "img/Defense.mp4";
-      container.style.background = `#FCBD2F url("../../img/background_Defence.png")`;
+      container.style.background = `#FCBD2F url("../img/background_Defence.png")`;
       break;
     case 2:
       button.style.color = "#56C02A";
       button.style.border = "2px solid #56C02A";
-      videoContainer.style.background = 'url("../../img/screenshot_Matcha.jpg")';
+      videoContainer.style.background = 'url("../img/screenshot_Matcha.jpg")';
       video.src = "img/Matcha.mp4";
-      container.style.background = `#56C02A url("../../img/background_Matcha.png")`;
+      container.style.background = `#56C02A url("../img/background_Matcha.png")`;
       break;
     case 3:
       button.style.color = "#F16276";
@@ -58,6 +58,7 @@ const getSwitch = (index) => {
 };
 const showSlides = (n) => {
   let i;
+  const curentSlide = slides[slideIndex - 1];
   if (n > slides.length) {
     slideIndex = 1
   }
@@ -70,14 +71,15 @@ const showSlides = (n) => {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex - 1].style.display = "flex";
-  slides[slideIndex - 1].classList.add(`swipe-right`);
+  curentSlide.style.display = "flex";
+  curentSlide.classList.add(`swipe-right`);
   dots[slideIndex - 1].className += " active";
   getSwitch(slideIndex);
 }
 
 const autoSlider = () => {
   let i;
+  const curentSlide = slides[slideIndex - 1];
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
@@ -87,8 +89,8 @@ const autoSlider = () => {
     dots[i].className = dots[i].className.replace(" active", "");
 
   }
-  slides[slideIndex - 1].style.display = "flex";
-  slides[slideIndex - 1].classList.add(`swipe-right`);
+  curentSlide.style.display = "flex";
+  curentSlide.classList.add(`swipe-right`);
   dots[slideIndex - 1].className += " active";
   getSwitch(slideIndex);
   const debounseAutoSlider = debounce(autoSlider);
