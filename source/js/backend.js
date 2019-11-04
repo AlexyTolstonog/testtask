@@ -1,20 +1,21 @@
+"use strict"
 let slideIndex = 1;
 let initialPoint;
 let finalPoint;
 const container = document.querySelector(`.main__container`);
 const video = document.querySelector(`.video`);
+const videoContainer = document.querySelector(`.video__container`);
 const dots = document.querySelectorAll(`.slider-dots_item`);
 const slides = document.querySelectorAll(".item");
 const mainContainer = document.querySelector('.main__container');
 const slider = document.querySelector(`.slider`);
 const button = document.querySelector(`.button--description`);
-const DEBOUNCE_INTERVAL = 3000; // ms
+const DEBOUNCE_INTERVAL = 3000;
 
 const debounce = function (cb) {
-  var lastTimeout = null;
-
+  let lastTimeout = null;
   return function () {
-    var parameters = arguments;
+    let parameters = arguments;
     if (lastTimeout) {
       window.clearTimeout(lastTimeout);
     }
@@ -28,28 +29,28 @@ const getSwitch = (index) => {
     case 1:
       button.style.color = "#FCBD2F";
       button.style.border = "2px solid #FCBD2F";
-      video.style.background = `url("../../img/screenshot_Defence.jpg")`;
+      videoContainer.style.background = 'url("../../img/screenshot_Defence.jpg")';
       video.src = "img/Defense.mp4";
       container.style.background = `#FCBD2F url("../../img/background_Defence.png")`;
       break;
     case 2:
       button.style.color = "#56C02A";
       button.style.border = "2px solid #56C02A";
-      video.style.background = `url("../../img/screenshot_Matcha.jpg")`;
+      videoContainer.style.background = 'url("../../img/screenshot_Matcha.jpg")';
       video.src = "img/Matcha.mp4";
       container.style.background = `#56C02A url("../../img/background_Matcha.png")`;
       break;
     case 3:
       button.style.color = "#F16276";
       button.style.border = "2px solid #F16276";
-      video.style.background = `url("../../img/screenshot_Glow.jpg")`;
+      videoContainer.style.background = `url("../../img/screenshot_Glow.jpg")`;
       video.src = "img/Glow.mp4";
       container.style.background = `#F16276 url("../../img/background_Glow.png")`;
       break;
     case 4:
       button.style.color = "#DE7A25";
       button.style.border = "2px solid #DE7A25";
-      video.style.background = `url("../../img/screenshot_Energise.jpg")`;
+      videoContainer.style.background = `url("../../img/screenshot_Energise.jpg")`;
       video.src = "img/Energise.mp4";
       container.style.background = `#DE7A25 url("../../img/background_Energise.png")`;
       break;
@@ -142,7 +143,6 @@ const onTouchEnd = (evt) => {
     }
   }
 }
-
 
 slider.addEventListener('touchstart', onTouchStart, false);
 slider.addEventListener('touchend', onTouchEnd);

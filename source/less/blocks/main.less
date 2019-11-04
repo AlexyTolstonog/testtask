@@ -1,5 +1,6 @@
 .main {
   font: 400 14px "Oswald", "Arial", sans-serif;
+  min-width: 320px;
   line-height: 18px;
   color: #444444;
   display: flex;
@@ -7,26 +8,17 @@
   width: 100%;
   height: 100%;
   justify-content: center;
+  min-height: 667px;
 }
 .main__container{
-  height: 100%;
+  height: auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #FEB930;
   background: url("../../img/background_Defence.png");
+  background-size: cover;
 }
 
-//планшетная версия
-@media (min-width: 768px) {
-  .main {
-    width: 100%;
-  }
-}
 
-//десктопная версия
-@media (min-width: 1300px) {
-  .main {
-    width: 100%;
-  }
-}
