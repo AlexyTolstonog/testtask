@@ -11,6 +11,7 @@
   const mainContainer = document.querySelector('.main__container');
   const slider = document.querySelector(`.slider`);
   const button = document.querySelector(`.button--description`);
+  const time = 3000;
 
   const getStyle = (index) => {
     button.style.color = window.elemStyles[index - 1].buttonColor;
@@ -27,10 +28,10 @@
   const showSlides = (n) => {
     let i;
     if (n > slides.length) {
-      slideIndex = 0
+      slideIndex = 1
     }
-    if (n < 0) {
-      slideIndex = slides.length - 1
+    if (n === 0) {
+      slideIndex = slides.length;
     }
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
@@ -55,12 +56,17 @@
     }
     getaActive();
     getStyle(slideIndex);
-    const debounseAutoSlider = window.debounce(autoSlider);
-    debounseAutoSlider();
-    mainContainer.removeEventListener(`mouseleave`, autoSlider);
-  }
+    window.autoSliderInterval = setTimeout(autoSlider, time);
+    window.removeEventListener(`DOMContentLoaded`, autoSlider);
 
+  }
+  const autoSliderCensel = () => clearTimeout(window.autoSliderInterval);
+
+  window.addEventListener(`DOMContentLoaded`, autoSlider);
   mainContainer.addEventListener(`mouseleave`, autoSlider);
+  mainContainer.addEventListener(`mouseenter`, autoSliderCensel);
+  mainContainer.addEventListener(`touchend`, autoSlider);
+  mainContainer.addEventListener(`touchstart`, autoSliderCensel);
 
   function nextSlide() {
     showSlides(slideIndex += 1);
