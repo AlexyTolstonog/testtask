@@ -1,12 +1,144 @@
 .footer {
+  min-width: 320px;
+  width: 100%;
+  /*mobile*/
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  background-color: #404040;
 }
-.footer-text{
-  text-align: center;
+
+.footer__container {
+  width: 280px;
+  /*ширина для мобильного*/
+  padding: 0 20px;
   margin: 0 auto;
-  font-size: 7.5px;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-text {
+  text-align: center;
+}
+
+.footer__interactive {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 20px;
+}
+
+.footer__interactive .social__list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.footer__interactive .link-icon {
+  width: 23px;
+  height: 23px;
+}
+
+.footer__copyright-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 10px;
+
+  &:hover {
+    fill: #1d51a6;
+  }
+
+  &:active {
+    opacity: 0.3;
+    fill: #1d51a6;
+  }
+}
+
+
+
+//планшетная версия
+@media (min-width: 768px) {
+  .footer {
+    width: 100%;
+    /*tablet*/
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer__container {
+    width: 708px;
+    padding: 45px 30px;
+    /*tablet-row*/
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: baseline;
+    min-height: 50px;
+  }
+
+  .footer__navigation-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .footer__copyright {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footer__copyright-text {
+    margin-right: 17px;
+  }
+
+  .footer__copyright-link {
+    justify-content: flex-end;
+  }
+
+  .footer__interactive-image {
+    display: none;
+  }
+}
+
+//десктопная версия
+@media (min-width: 1300px) {
+  .footer {
+    width: 100%;
+    /*desctop*/
+  }
+
+  .footer__container {
+    width: 1220px;
+    padding: 45px 40px;
+    /*desctop row*/
+    margin: 0 auto;
+  }
+
+  .footer__logo-link {
+    width: 100%;
+  }
+
+  .footer__container-top {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .footer__text-container,
+  .footer__navigation,
+  .footer__navigation-interactive {
+    width: 30%;
+  }
+
+  .footer__interactive-image {
+    margin-top: 20px;
+    display: block;
+  }
 }

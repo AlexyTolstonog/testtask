@@ -1,145 +1,442 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link
-      rel="preload"
-      href="fonts/oswaldmedium.woff2"
-      as="font"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      href="fonts/oswaldregular.woff2"
-      as="font"
-      crossorigin="anonymous"
-    />
-    <link href="css/style.min.css" rel="stylesheet" />
-    <script>
-      document.createElement("picture");
-    </script>
-    <script src="js/picturefill.min.js" async=""></script>
-    <title>Some__test</title>
-  </head>
-
-  <body>
-    <div style="display:none">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-      >
-        <symbol id="icon-fb-mobile" viewbox="0 0 10 19">
-          <path
-            d="M7.1 19H2v-8.8H0V5.8h1.9c-.1-2 .2-3.4 1.1-4.4C3.8.5 5 .1 6.5 0H10v4.2H7.2c-.1.2-.2.8-.2 1.6h3v4.4H7.1V19zm-4-1h2.8V9.1h2.9V6.8H5.9v-.5c0-1.4 0-2.6.7-3.1l.1-.1h2.1V1H6.5c-1.2.1-2 .4-2.6 1-.8.8-1 2.3-.8 4.2l.1.6H1.1v2.3h2V18z"
-          ></path>
-        </symbol>
-        <symbol id="icon-fb" viewbox="34.789 -4.709 13.518 27.75">
-          <path
-            d="M44.32 23.041h-6.816V10.137h-2.715V3.763h2.629c-.202-2.887.298-5 1.519-6.444 1.039-1.229 2.583-1.911 4.588-2.026l4.782-.001v6.15h-3.755c-.166.315-.251 1.093-.252 2.321h3.978v6.375H44.32v12.903zm-5.316-1.5h3.816V8.637h3.957V5.263h-3.953l-.016-.734c-.044-2.04.002-3.784 1.007-4.46l.19-.127h2.801v-3.15h-3.239c-1.557.091-2.711.581-3.485 1.496-1.041 1.231-1.41 3.298-1.099 6.144l.092.832h-2.786v3.375h2.715v12.902z"
-          ></path>
-        </symbol>
-        <symbol id="icon-insta" viewbox="-3 -3 23 23">
-          <path
-            d="M14.002-1.501C16.482-1.501 18.5.519 18.5 3v11c0 2.481-2.018 4.5-4.498 4.5H3.01A4.504 4.504 0 0 1-1.488 14V3C-1.488.519.53-1.5 3.01-1.5h10.992m0-1.5H3.01C-.29-3-2.987-.301-2.987 3v11.001C-2.987 17.299-.29 20 3.01 20h10.995C17.301 20 20 17.299 20 13.999V3c0-3.301-2.699-6-5.998-6z"
-          ></path>
-          <path
-            d="M8.506 4.078a4.434 4.434 0 0 1 4.429 4.428c0 2.44-1.989 4.43-4.429 4.43a4.434 4.434 0 0 1-4.428-4.43 4.431 4.431 0 0 1 4.428-4.428m0-1.5a5.929 5.929 0 0 0 0 11.855c3.274 0 5.926-2.653 5.926-5.927S11.78 2.578 8.506 2.578z"
-          ></path>
-          <circle cx="14.646" cy="2.379" r="1.341"></circle>
-        </symbol>
-        <symbol id="icon-mail" viewbox="0 0 17 13">
-          <path
-            d="M15.6 11.6H1.4V5.8H0V13h17V5.8h-1.4v5.8zM0 0v2.3l8.5 7.1L17 2.3V0H0zm15.6 1.6L8.5 7.5 1.4 1.6v-.2h14.2v.2z"
-          ></path>
-        </symbol>
-      </svg>
-    </div>
-
-    <main class="main">
-      <section class=" main__container">
-        <div class="video__container">
-          <video
-            class="video"
-            src="img/Defense.mp4"
-            autoplay=""
-            loop=""
-            preload="auto"
-          ></video>
-        </div>
-
-        <section class="items">
-          <section class="slider">
-            <div class="item">
-              <img
-                class="item__image"
-                src="img/Defence_packshot.png"
-                alt="Defence_packshot"
-              />
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <link rel="preload" href="fonts/Cormorantinfant.woff2" as="font" crossorigin="anonymous">
+      <link rel="preload" href="fonts/Cormorantinfantitalic.woff2" as="font" crossorigin="anonymous">
+      <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+      <link href="css/style.min.css" rel="stylesheet">
+      <script>
+         document.createElement("picture");
+         
+      </script>
+      <script src="js/picturefill.min.js" async></script>
+      <title>some test</title>
+   </head>
+   <body>
+     <!-- <div class="romb"></div> -->
+      <div style="display:none">
+         <include src="build/img/sprite.svg"></include>
+      </div>
+      <header class="header" id="home">
+         <section class="container">
+            <div class="header__container">
+               <a class="header__container-linck" href="index.html">
+                  <h1 class="header__container-linck-header">uixrex</h1>
+               </a>
+               <nav class="navigation navigation--closed navigation--nojs">
+                  <button class="navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+                  <div class="navigation__wrapper">
+                     <ul class="navigation__list">
+                        <li class="navigation__item navigation__item--active"><a class="navigation__item-link" href="home">Home
+                           </a>
+                        </li>
+                        <li class="navigation__item"><a class="navigation__item-link" href="about"> About
+                           </a>
+                        </li>
+                        <li class="navigation__item"><a class="navigation__item-link" href="features">Features</a></li>
+                        <li class="navigation__item"><a class="navigation__item-link" href="pricing">Pricing</a></li>
+                        <li class="navigation__item"><a class="navigation__item-link" href="screenshot">Screenshot</a></li>
+                        <li class="navigation__item"><a class="navigation__item-link" href="contact">Contact</a></li>
+                     </ul>
+                  </div>
+               </nav>
             </div>
+            <a class="button button--try" href="#">Try for free</a>
+         </section>
+      </header>
+      <main class="main">
+         <section class="description">
+         <section class="proposition">
+            <img class="proposition-image" src="img/Phone.png" alt="phone">
+            <section class=" proposition_description">
+               <h1 class="proposition_description-title">The Best App to Increase
+                  Your Productivity
+               </h1>
+               <p class="proposition_description-text">A mobile app is a computer program designed to run on a 
+                  mobile device such as a phone/tablet or watch.
+               </p>
+               <article class="proposition_description-button-container">
+                  <a class="proposition_button button button--app-store" href="#">
+                     <svg focusable="false" class="link-icon" width="12" height="19">
+                        <use xlink:href="#icon-vka"></use>
+                     </svg>
+                     <span class="proposition_button-description">Get It From</span><span class="proposition_button-title">App store</span>
+                  </a>
+                  <a class="proposition_button button button--play-store" href="https://www.apple.com/ru/ios/app-store/">
+                     <svg focusable="false" class="link-icon" width="12" height="19">
+                        <use xlink:href="#icon-vka"></use>
+                     </svg>
+                     <span class="proposition_button-description">Get It From</span>
+                     <span class="proposition_button-title">Play store</span>
+                  </a>
+               </article>
+            </section>
+         </section>
+         <section class="about" id="about">
+            <h2 class="about-title">About The App</h2>
+            <p class="about-text">Writers and stars of Veep have responded incredulously to the news an Australian politician
+               required preinstalled stitches way  email client, calendar, mapping program.
+            </p>
+            <section class="cards">
+               <article class="card card--support">
+                  <span class="card-img"></span>
+                  <strong class="card-title">24/7 Support</strong>
+                  <p class="card-text">Apps that are not preinstalled are usually available through distribution platforms called app stores.</p>
+               </article>
+               <article class="card card--privacy">
+                  <strong class="card-title">Data Privacy</strong>
+                  <p class="card-text">Apps that are not preinstalled are usually available through distribution platforms called app stores.</p>
+               </article>
+               <article class="card card--download">
+                  <strong class="card-title">Easy Download</strong>
+                  <p class="card-text">Apps that are not preinstalled are usually available through distribution platforms called app stores.</p>
+               </article>
+            </section>
+         </section>
+         <section class="features" id="features">
+            <h2 class="proposition_description-title">Features The App</h2>
+            <p class="proposition_description-text">A mobile app is a computer program designed to run on a 
+               mobile device such as a phone/tablet or watch.
+            </p>
+            <section class=" features_container">
+               <img class="features-image" src="img/hero-img.png" alt="phone">
+               <section class="features_list">
+                  <section class="item">
+                     <article class="item_image">
+                        <img class="item_image-image"  src="img/design.png" alt="">
+                     </article>
+                     <article class="item_description">
+                        <strong class="item_description-title">CREATIVE DESIGN</strong>
+                        <p class="item_description-text">Lorem ipsum dolor sit amet, consectet adop adipisicing elit, sed do eiusmod temporara. Another projects managed with a easy design is what we stand for.incididunt ugt labore.</p>
+                     </article>
+                  </section>
+                  <section class="item">
+                     <article class="item_image">
+                        <img class="item_image-image"  src="img/featured-icon5.png" alt="">
+                     </article>
+                     <article class="item_description">
+                        <strong class="item_description-title">CREATIVE DESIGN</strong>
+                        <p class="item_description-text">Lorem ipsum dolor sit amet, consectet adop adipisicing elit, sed do eiusmod temporara. Another projects managed with a easy design is what we stand for.incididunt ugt labore.</p>
+                     </article>
+                  </section>
+                  <section class="item">
+                     <article class="item_image">
+                        <img class="item_image-image"  src="img/featured-icon1.png" alt="">
+                     </article>
+                     <article class="item_description">
+                        <strong class="item_description-title">CREATIVE DESIGN</strong>
+                        <p class="item_description-text">Lorem ipsum dolor sit amet, consectet adop adipisicing elit, sed do eiusmod temporara. Another projects managed with a easy design is what we stand for.incididunt ugt labore.</p>
+                     </article>
+                  </section>
+                  <section class="item">
+                     <article class="item_image">
+                        <img class="item_image-image"  src="img/code-alt.png" alt="">
+                     </article>
+                     <article class="item_description">
+                        <strong class="item_description-title">CREATIVE DESIGN</strong>
+                        <p class="item_description-text">Lorem ipsum dolor sit amet, consectet adop adipisicing elit, sed do eiusmod temporara. Another projects managed with a easy design is what we stand for.incididunt ugt labore.</p>
+                     </article>
+                  </section>
+               </section>
+            </section>
+         </section>
+         <section class="pricing" id="pricing">
+            <h2 class="pricing_description-title">Pricing Plan</h2>
+            <p class="pricing_description-text">Writers and stars of Veep have responded incredulously to the news an Australian politician
+               required preinstalled stitches way  email client, calendar, mapping program.
+            </p>
+            <section class="border_cards">
+               <article class="border_card">
+                  <h3 class="border_card-title">Basic</h3>
+                  <p class="border_card-price">$00</p>
+                  <p class="border_card-access">Limited access</p>
+                  <ul class="border_card-access-rights">
+                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>100 MB Disk Space</li>
+                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>2 Subdo mains</li>
+                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>5 Email Accounts</li>
+                     <li class="border_card-access-right border_card-access-right--false"><span class="close"></span>No License</li>
+                     <li class="border_card-access-right border_card-access-right--false"><span class="close"></span>Phone & Mail Support</li>
+                  </ul>
+                  <a class="border_card-button button" href="#">PURCHASE</a>
+               </article>
+               <article class="border_card">
+                  <h3 class="border_card-title">Professional</h3>
+                  <p class="border_card-price">$12</p>
+                  <p class="border_card-access">Limited access</p>
+                  <ul class="border_card-access-rights">
+                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>100 MB Disk Space</li>
+                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>2 Subdo mains</li>
+                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>5 Email Accounts</li>
+                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>No License</li>
+                     <li class="border_card-access-right border_card-access-right--false"><span class="close"></span>Phone & Mail Support</li>
+                  </ul>
+                  <a class="border_card-button button" href="#">PURCHASE</a>
+               </article>
+               <article class="border_card">
+                  <h3 class="border_card-title">Business</h3>
+                  <p class="border_card-price">$22</p>
+                  <p class="border_card-access">Limited access</p>
+                  <ul class="border_card-access-rights">
+                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>100 MB Disk Space</li>
+                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>2 Subdo mains</li>
+                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>5 Email Accounts</li>
+                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>No License</li>
+                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>Phone & Mail Support</li>
+                  </ul>
+                  <a class="border_card-button button" href="#">PURCHASE</a>
+               </article>
+            </section>
+         </section>
+         <section class="screenshot" id="screenshot">
+            <h2 class="screenshot_description-title">App Screenshots</h2>
+            <p class="screenshot_description-text">Most such devices are sold with several apps bundled as pre-installed software, 
+               such as a web browser, email client, calendar, mapping program.
+            </p>
+            <section class="slider_container">
 
-            <div class="item">
-              <img
-                class="item__image"
-                src="img/Matcha_packshot.png"
-                alt="Matcha_packshot"
-              />
-            </div>
-
-            <div class="item">
-              <img
-                class="item__image"
-                src="img/Glow_packshot.png"
-                alt="Glow_packshot"
-              />
-            </div>
-            <div class="item">
-              <img
-                class="item__image"
-                src="img/Energise_packshot.png"
-                alt="Energise_packshot"
-              />
-            </div>
-
-            <div class="slider-dots">
-              <span class="slider-dots_item" id="1"></span>
-              <span class="slider-dots_item" id="2"></span>
-              <span class="slider-dots_item" id="3"></span>
-              <span class="slider-dots_item" id="4"></span>
-            </div>
-          </section>
-
-          <section class="description">
-            <h1 class="description-headline">
-              <spam class="description-headline-text">TWININGS</spam>
-            </h1>
-            <h2 class="description-subheadline">SUPERBLENDS</h2>
-            <p class="description-text">Now only</p>
-            <p class="description-coast">&pound; 2</p>
-            <p class="description-text">at Tesco</p>
-            <p class="description-limited">limited time only</p>
-            <a href="https://www.google.com/" class="button button--description"
-              >DISCOVER</a
-            >
-          </section>
-        </section>
-
-        <div class="footer">
-          <p class="footer-text">
-            Promotion available 7/11/18 - 27/11/18 from Tabacko
-          </p>
-          <p class="footer-text">
-            Only available on selected stores,while stocks kist.Delyvery for may
-            apply/RRP &pound; 2.69
-          </p>
-        </div>
-      </section>
-    </main>
-
-    <script src="js/svgxuse.min.js"></script>
-    <script src="js/svgforeverybody.min.js"></script>
-    <script src="js/mock.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/utils.js"></script>
-  </body>
+              <section class="slider_container-owl">
+               <div class="owl-carousel owl-theme owl-loaded owl-drag">
+                  <div class="owl-stage-outer">
+                     <div class="owl-stage">
+                        <div class="owl-item" >
+                           <img class="owl-image" src="img/06_copy_4.png" alt="">
+                        </div>
+                        <div class="owl-item">
+                           <img class="owl-image" src="img/06_copy_5.png" alt="">
+                        </div>
+                        <div class="owl-item">
+                           <img class="owl-image" src="img/06_copy_6.png" alt="">
+                        </div>
+                        <div class="owl-item">
+                           <img class="owl-image" class="owl_item-image" src="img/06_copy_7.png" alt="">
+                        </div>
+                        <div class="owl-item">
+                           <img class="owl-image"  src="img/06_copy_8.png" alt="">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+              </section>
+               <section class="slider">
+                  <h4 class="slider-title">Some Talk of Our Clients</h4>
+                  <section class="slider_item">
+                     <section class="post-container">
+                        <section class="post">
+                           <article class="post_image-container">
+                              <img class="post-image" src="img/ava-men.png" alt="avatar">
+                           </article>
+                           <strong class="post-title">oliver gomes</strong>
+                           <p class="post-position">CEO of google</p>
+                           <p class="post-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,good.</p>
+                        </section>
+                        <section class="post">
+                           <article class="post_image-container">
+                              <img class="post-image" src="img/ava-wooman.png" alt="avatar">
+                           </article>
+                           <strong class="post-title">Rita watson</strong>
+                           <p class="post-position">Web Designer</p>
+                           <p class="post-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,good.</p>
+                        </section>
+                     </section>
+                  </section>
+                  <section class="slider_item">
+                     <section class="post-container">
+                        <section class="post">
+                           <article class="post_image-container">
+                              <img class="post-image" src="img/ava-men.png" alt="avatar">
+                           </article>
+                           <strong class="post-title">oliver gomes</strong>
+                           <p class="post-position">CEO of google</p>
+                           <p class="post-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,good.</p>
+                        </section>
+                        <section class="post">
+                           <article class="post_image-container">
+                              <img class="post-image" src="img/ava-wooman.png" alt="avatar">
+                           </article>
+                           <strong class="post-title">Rita watson</strong>
+                           <p class="post-position">Web Designer</p>
+                           <p class="post-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,good.</p>
+                        </section>
+                     </section>
+                  </section>
+                  <section class="slider_item">
+                     <section class="post-container">
+                        <section class="post">
+                           <article class="post_image-container">
+                              <img class="post-image" src="img/ava-men.png" alt="avatar">
+                           </article>
+                           <strong class="post-title">oliver gomes</strong>
+                           <p class="post-position">CEO of google</p>
+                           <p class="post-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,good.</p>
+                        </section>
+                        <section class="post">
+                           <article class="post_image-container">
+                              <img class="post-image" src="img/ava-wooman.png" alt="avatar">
+                           </article>
+                           <strong class="post-title">Rita watson</strong>
+                           <p class="post-position">Web Designer</p>
+                           <p class="post-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,good.</p>
+                        </section>
+                     </section>
+                  </section>
+                  <div class="slider-dots">
+                     <span class="slider-dots_item" id="1"></span>
+                     <span class="slider-dots_item" id="2"></span>
+                     <span class="slider-dots_item" id="3"></span>
+                  </div>
+               </section>
+            </section>
+         </section>
+         <section class="backform" id="contact">
+            <h2 class="backform-title">Say Hello To Us!</h2>
+            <p class="backform-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. et dolore magna aliqua..</p>
+            <section class="backform_container">
+               <section class="backform_description">
+                  <article class="backform_description-info backform_description-info--location">
+                     <p class="backform_description-info-name backform_description-info-name--location">location</p>
+                     <p class="backform_description-info-description">Jurain,Dhaka Bangladesh</p>
+                  </article>
+                  <article class="backform_description-info backform_description-info--phone">
+                     <p class="backform_description-info-name backform_description-info-name--phone">phone</p>
+                     <p class="backform_description-info-description">+1234321321</p>
+                  </article>
+                  <article class="backform_description-info backform_description-info--mail">
+                     <p class="backform_description-info-name backform_description-info-name--mail">e-mail</p>
+                     <p class="backform_description-info-description">websitename@mail.com</p>
+                  </article>
+               </section>
+               <section class="backform_form">
+                  <form action="#" class="form">
+                     <input class="form_send-field form_send-field--name" type="text" name="name" value="" placeholder="Name" id="name">
+                     <input class="form_send-field form_send-field--email" type="email" name="email" value="" placeholder="E-mail" id="email">
+                     <textarea class="form_send-field form_send-field--message" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                     <button class="form_send-button">Send Message</button>
+                  </form>
+               </section>
+               <section class="modal">
+                  <div class="modal_container">
+                     <a href="#" class="modal_button-close modal_button-close--rownd"></a>
+                     <h2 class="modal-title">Thank you! Message sent</h2>
+                     <a href="#" class="button modal_button-close modal_button-close--long">Okay,bro</a>
+                  </div>
+               </section>
+            </section>
+         </section>
+         <section class="map">
+            <iframe class="map-item"
+               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.6296389356044!2d30.32212272883606!3d59.938287541277234!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8403eb878242dbd5!2z0JTQvtGF0L7QtNC90YvQuSDQtNC-0Lwg0J0uINCQLiDQnNC10LvRjNGG0LXRgNCw!5e0!3m2!1sru!2sua!4v1557044802093!5m2!1sru!2sua"
+               width="800" height="365" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+         </section>
+      </main>
+      <footer class="footer">
+         <section class="footer__container">
+            <p class="footer-text">Copyright © 2018 UIXREX, All rights Reserved.</p>
+            <article class="footer__interactive">
+               <ul class="social__list">
+                  <li class="social__item">
+                     <a href="#" class="social__link social__link--facebook">
+                        <svg focusable="false" class="link-icon" width="12" height="19">
+                           <use xlink:href="#icon-face"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="social__item">
+                     <a href="#" class="social__link social__link--twitter">
+                        <svg focusable="false" class="link-icon" width="12" height="19">
+                           <use xlink:href="#icon-twi"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="social__item">
+                     <a href="#" class="social__link social__link--insta">
+                        <svg focusable="false" class="link-icon" width="12" height="19">
+                           <use xlink:href="#icon-inst"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="social__item">
+                     <a href="#" class="social__link social__link--facebook">
+                        <svg focusable="false" class="link-icon" width="12" height="19">
+                           <use xlink:href="#icon-face"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="social__item">
+                     <a href="#" class="social__link social__link--twitter">
+                        <svg focusable="false" class="link-icon" width="12" height="19">
+                           <use xlink:href="#icon-twi"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="social__item">
+                     <a href="#" class="social__link social__link--insta">
+                        <svg focusable="false" class="link-icon" width="12" height="19">
+                           <use xlink:href="#icon-inst"></use>
+                        </svg>
+                     </a>
+                  </li>
+               </ul>
+            </article>
+         </section>
+      </footer>
+      <script>
+         var navMain = document.querySelector('.navigation');
+         var navToggle = document.querySelector('.navigation__toggle');
+         
+         navMain.classList.remove('navigation--nojs');
+         
+         navToggle.addEventListener('click', function () {
+           if (navMain.classList.contains('navigation--closed')) {
+             navMain.classList.remove('navigation--closed');
+             navMain.classList.add('navigation--opened');
+           } else {
+             navMain.classList.add('navigation--closed');
+             navMain.classList.remove('navigation--opened');
+           }
+         });
+         
+         
+         
+         
+      </script>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/index.js"></script>
+      <script src="js/svgxuse.min.js"></script>
+      <script src="js/svgforeverybody.min.js"> </script>
+      <script>
+         $(document).ready(function(){
+           $('.owl-carousel').owlCarousel({
+             loop:true,
+         margin:10,
+         loop:true,
+         nav:true,
+         autoplay:false,
+         autoplayTimeout:4000,
+         autoplayHoverPause:false,
+         responsiveClass:true,
+         responsive:{
+             0:{
+                 items:1,
+             },
+             700:{
+                 items:2
+             },
+             1000:{
+                 items:3,
+             },
+         }
+         })
+         
+         })
+         $('.play').on('click',function(){
+         owl.trigger('play.owl.autoplay',[1000])
+         })
+         $('.stop').on('click',function(){
+         owl.trigger('stop.owl.autoplay')
+         });
+      </script>
+   </body>
 </html>

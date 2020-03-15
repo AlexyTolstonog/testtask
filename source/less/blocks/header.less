@@ -1,0 +1,120 @@
+.header {
+  font: 400 14px "Montserat", "Arial", sans-serif;
+  line-height: 18px;
+  color: #444444;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1d72fe;
+}
+
+.container{
+  max-width: 1200px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-width: 280px;
+  width: 87%;
+  padding: 0 20px;
+  margin: 0 auto;
+  background: #1d72fe;
+  padding-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__container-linck {
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.header__container-linck-header {
+  width: 117px;
+  height: 25px;
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 48.64px;
+  text-transform: uppercase;
+}
+
+.header__container-linck-text {
+  font-style: italic;
+  color: #595959;
+  font-family: "Cormorantinfant", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.08px;
+}
+
+//планшетная версия
+@media (min-width: 768px) {
+  .header {
+    width: 100%;
+    border: none;
+    flex-direction: row;
+  }
+  .container{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+  
+
+  .header__container {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    border: none;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  .header__container-linck-header {
+margin: 0;
+height: auto;
+  }
+}
+
+//десктопная версия
+@media (min-width: 1300px) {
+  .header {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  //ширина для десктопа
+  .header__container {
+    width: 1220px;
+    /*ширина контента для десктопа*/
+    padding: 0 40px;
+    /*внутрение отступы*/
+    margin: 0 auto;
+    border: none;
+  }
+
+  .header__container-linck-header {
+    margin-top: 0px;
+    margin-bottom: 9px;
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: 1.18px;
+  }
+
+  .header__container-linck-text {
+    margin-top: 10px;
+    letter-spacing: -0.5px;
+  }
+}

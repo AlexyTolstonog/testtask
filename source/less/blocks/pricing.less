@@ -1,0 +1,53 @@
+.pricing {
+  padding: 0px 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F8F6F6;
+}
+.pricing_description-title{
+color: #5d5d5d;
+font-size: 36px;
+font-weight: 500;
+line-height: 36px;
+}
+
+.pricing_description-text{
+color: #737373;
+text-align: center;
+font-size: 20px;
+font-weight: 400;
+line-height: 36px;
+}
+
+
+
+//планшетная версия
+@media (min-width: 768px) {
+  .cards {
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+  }
+
+
+}
+
+@media (min-width: 1300px) {
+  .cards {
+    flex-direction: row;
+    align-items: flex-start;
+    width: 1220px;
+  }
+
+  .cards__container {
+    width: 48%;
+    padding-top: 18px;
+  }
+
+  .cards__container--big {
+    flex-direction: column;
+  }
+}

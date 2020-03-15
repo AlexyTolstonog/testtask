@@ -1,0 +1,104 @@
+.proposition {
+  width: auto;
+  /*ширина для мобильного*/
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+ background-color: #1d72fe;
+
+}
+
+.proposition-image {
+  max-width: 100%;
+}
+
+.proposition_description-title {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: center;
+}
+
+.proposition_description-text {
+  min-height: 58px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+}
+
+.proposition_description-button-container {
+  display: flex;
+  min-height: 175px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.button--app-store {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/app-store.png");
+    background-repeat: no-repeat;
+    width: 29px;
+    height: 32px;
+    left: 20px;
+  }
+}
+
+.button--play-store {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/play-store.png");
+    background-repeat: no-repeat;
+    width: 29px;
+    height: 32px;
+    left: 20px;
+  }
+}
+
+.proposition_button {
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+}
+
+//планшетная версия
+@media (min-width: 768px) {
+  .proposition {
+    flex-direction: row;
+  }
+  .proposition_description-button-container {
+    flex-wrap: wrap;
+    flex-direction: unset;
+    justify-content: center;
+  }
+  .proposition_button {
+    margin-left: 20px;
+  }
+
+  .proposition-image {
+    max-width: 50%;
+  }
+
+  .info__content {
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (min-width: 1300px) {
+  .proposition{
+  width: 1220px;
+  padding: 40px 0;
+  }
+}

@@ -1,0 +1,97 @@
+.backform {
+  width: auto;
+  /*ширина для мобильного*/
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  margin-top: 90px;
+  padding-bottom: 70px;
+  position: relative;
+}
+.backform-title {
+  color: #3b3b3b;
+  line-height: 38px;
+  font-size: 39px;
+  font-weight: 400;
+}
+.backform-text {
+  color: #3b3b3b;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 25.23px;
+}
+.backform_container{
+  display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.backform_description {
+  background-color: #ffffff;
+  width: 100%;
+  margin-top: 20px;
+}
+.backform_description-info {
+  padding-left: 30px;
+  margin-bottom: 58px;
+}
+.backform_description-info-name {
+  line-height: 17px;
+  color: #3b3b3b;
+  font-size: 17px;
+  font-weight: 400;
+  position: relative;
+}
+
+.backform_description-info-description {
+  color: #585858;
+  font-weight: 300;
+  line-height: 17px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.backform_description-info-name::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  left: -26px;
+}
+.backform_description-info-name--location::before {
+  background-image: url("../img/flag-icon.png");
+}
+.backform_description-info-name--phone::before {
+  background-image: url("../img/telephone-icon.png");
+}
+.backform_description-info-name--mail::before {
+  background-image: url("../img/mail-icon.png");
+}
+.features-image {
+  max-width: 100%;
+}
+
+.backform_form{
+  width: 100%;
+margin-top: 20px;
+}
+//планшетная версия
+@media (min-width: 768px) {
+  .backform_description {
+    width: 45%;
+  }
+  .backform_form{
+    width: 45%;
+    max-width: 743px;
+  }
+
+}
+
+//десктопная версия
+@media (min-width: 1300px) {
+
+}

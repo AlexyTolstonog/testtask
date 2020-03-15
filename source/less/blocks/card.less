@@ -1,0 +1,105 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  max-width: 289px;
+  height: auto;
+  min-height: 184px;
+  background-color: white;
+  border: 1px solid #e6e6e6;
+  margin-top: 20px;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.75);
+}
+.card--support::after,
+.card--privacy::after,
+.card--download::after {
+  content: "";
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 32px;
+  height: 38px;
+  left: 45%;
+  top: 23%;
+}
+.card--support::before,
+.card--privacy::before,
+.card--download::before {
+  content: "";
+  position: absolute;
+  transform: rotate(45deg);
+  width: 96px;
+  height: 95px;
+  left: 35%;
+}
+
+.card--support {
+  &::before {
+    background: #f3f5f8;
+  }
+
+  &::after {
+    background-image: url("../img/support.png");
+  }
+}
+
+.card--privacy {
+  &::before {
+    background-color: #4085f6;
+  }
+
+  &::after {
+    background-image: url("../img/ui-lock.png");
+  }
+}
+
+.card--download {
+  &::before {
+    background: #f3f5f8;
+  }
+
+  &::after {
+    background-image: url("../img/download.png");
+  }
+}
+
+.card-title {
+  margin-top: 127px;
+  font-size: 24px;
+}
+.card--privacy > .card-title {
+  color: #4085f6;
+}
+
+.card-text {
+  font-size: 16px;
+  text-align: center;
+}
+
+
+
+.card__interactive {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+//паншетная версия
+@media (min-width: 768px) {
+  .card {
+    border: 1px solid #e6e6e6;
+    margin: 5px 5px;
+  }
+
+}
+
+//десктопная версия
+@media (min-width: 1300px) {
+ .card{
+   padding: 50px 20px;
+ }
+}

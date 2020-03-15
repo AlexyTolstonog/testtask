@@ -1,29 +1,19 @@
 'use strict';
 (function () {
+
   let slideIndex = 1;
   let initialPoint;
   let finalPoint;
-  const container = document.querySelector(`.main__container`);
-  const video = document.querySelector(`.video`);
-  const videoContainer = document.querySelector(`.video__container`);
   const dots = document.querySelectorAll(`.slider-dots_item`);
-  const slides = document.querySelectorAll(".item");
-  const mainContainer = document.querySelector('.main__container');
+  const slides = document.querySelectorAll(".slider_item");
   const slider = document.querySelector(`.slider`);
-  const button = document.querySelector(`.button--description`);
+
   const time = 3000;
 
-  const getStyle = (index) => {
-    button.style.color = window.elemStyles[index - 1].buttonColor;
-    button.style.border = window.elemStyles[index - 1].buttonBorder;
-    videoContainer.style.background = window.elemStyles[index - 1].videoContainerBackground;
-    video.src = window.elemStyles[index - 1].videoSrc;
-    container.style.background = window.elemStyles[index - 1].containerBackground;
-  };
   const getaActive = () => {
     slides[slideIndex - 1].style.display = "flex";
     slides[slideIndex - 1].classList.add('swipe-right');
-    dots[slideIndex - 1].className += " active";
+    dots[slideIndex - 1].className += " activeSlider";
   };
   const showSlides = (n) => {
     let i;
@@ -37,10 +27,9 @@
       slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+      dots[i].className = dots[i].className.replace(" activeSlider", "");
     }
     getaActive();
-    getStyle(slideIndex);
   }
 
   const autoSlider = () => {
@@ -51,11 +40,10 @@
     slideIndex++;
     if (slideIndex > slides.length) { slideIndex = 1 }
     for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+      dots[i].className = dots[i].className.replace(" activeSlider", "");
 
     }
     getaActive();
-    getStyle(slideIndex);
     window.autoSliderInterval = setTimeout(autoSlider, time);
     window.removeEventListener(`DOMContentLoaded`, autoSlider);
 
@@ -63,10 +51,6 @@
   const autoSliderCensel = () => clearTimeout(window.autoSliderInterval);
 
   window.addEventListener(`DOMContentLoaded`, autoSlider);
-  mainContainer.addEventListener(`mouseleave`, autoSlider);
-  mainContainer.addEventListener(`mouseenter`, autoSliderCensel);
-  mainContainer.addEventListener(`touchend`, autoSlider);
-  mainContainer.addEventListener(`touchstart`, autoSliderCensel);
 
   function nextSlide() {
     showSlides(slideIndex += 1);
@@ -80,7 +64,6 @@
   const onDotsCkick = (evt) => {
     let index = parseInt(evt.currentTarget.id, 10);
     currentSlide(index);
-    getStyle(index);
   }
 
   showSlides(slideIndex);
@@ -116,4 +99,38 @@
 
   slider.addEventListener('touchstart', onTouchStart, false);
   slider.addEventListener('touchend', onTouchEnd);
+
+  document.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    if (evt.target.className === 'navigation__item-link') {
+      const atrr = evt.target.getAttribute('href');
+      if (atrr !== '#') {
+        document.getElementById(atrr).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        })
+      }
+      else {
+        evt.preventDefault();
+      }
+    }
+    else {
+      evt.preventDefault();
+    }
+  })
+
+
+  let modal = document.querySelector('.modal');
+  modal.style.display = 'none';
+  let modalButtonSend = document.querySelector('.form_send-button');
+  modalButtonSend.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    modal.style.display = 'flex';
+    modal.addEventListener('click', function (evt) {
+      let target = evt.target;
+      if (target.className === 'modal_button-close modal_button-close--rownd' || target.className === 'button modal_button-close modal_button-close--long') {
+        modal.style.display = 'none';
+      }
+    })
+  })
 })();
