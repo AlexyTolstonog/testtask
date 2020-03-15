@@ -7,7 +7,6 @@
   const dots = document.querySelectorAll(`.slider-dots_item`);
   const slides = document.querySelectorAll(".slider_item");
   const slider = document.querySelector(`.slider`);
-
   const time = 3000;
 
   const getaActive = () => {

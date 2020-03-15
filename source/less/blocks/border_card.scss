@@ -125,29 +125,3 @@
   -webkit-transform: rotate(27deg);
   transform: rotate(27deg);
 }
-
-//планшетная версия
-@media (min-width: 768px) {
-  .cards {
-    width: 100%;
-    padding: 0;
-    justify-content: center;
-  }
-}
-
-@media (min-width: 1300px) {
-  .cards {
-    flex-direction: row;
-    align-items: flex-start;
-    width: 1220px;
-  }
-
-  .cards__container {
-    width: 48%;
-    padding-top: 18px;
-  }
-
-  .cards__container--big {
-    flex-direction: column;
-  }
-}

@@ -1,7 +1,6 @@
 .footer {
   min-width: 320px;
   width: 100%;
-  /*mobile*/
   display: flex;
   flex-direction: column;
   background-color: #404040;
@@ -9,7 +8,6 @@
 
 .footer__container {
   width: 280px;
-  /*ширина для мобильного*/
   padding: 0 20px;
   margin: 0 auto;
   display: flex;
@@ -58,13 +56,9 @@
   }
 }
 
-
-
-//планшетная версия
 @media (min-width: 768px) {
   .footer {
     width: 100%;
-    /*tablet*/
     min-height: 150px;
     display: flex;
     justify-content: center;
@@ -73,10 +67,9 @@
   .footer__container {
     width: 708px;
     padding: 45px 30px;
-    /*tablet-row*/
     margin: 0 auto;
     flex-direction: row;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: baseline;
     min-height: 50px;
   }
@@ -106,17 +99,14 @@
   }
 }
 
-//десктопная версия
 @media (min-width: 1300px) {
   .footer {
     width: 100%;
-    /*desctop*/
   }
 
   .footer__container {
     width: 1220px;
     padding: 45px 40px;
-    /*desctop row*/
     margin: 0 auto;
   }
 

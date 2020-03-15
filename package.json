@@ -16,9 +16,11 @@
     "gulp-postcss": "8.0.x",
     "gulp-posthtml": "^3.0.4",
     "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "2.6.x",
     "gulp-svgstore": "^7.0.1",
     "gulp-webp": "^4.0.1",
+    "node-sass": "^4.13.1",
     "posthtml-include": "^1.4.0",
     "stylelint": "9.10.x",
     "stylelint-config-htmlacademy": "^0.1.4"
@@ -48,6 +50,7 @@
   },
   "dependencies": {
     "jquery": "^3.4.1",
-    "owl.carousel": "^2.3.4"
+    "owl.carousel": "^2.3.4",
+    "sass": "^1.26.3"
   }
 }

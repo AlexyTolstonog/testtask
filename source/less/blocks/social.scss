@@ -30,12 +30,12 @@
   width: 10px;
   height: 13px;
   fill: #cccccc;
-&:hover {
-  fill: #1d51a6;
-}
-&:hover{
-  fill: #1d51a6;
-}
+  &:hover {
+    fill: #1d51a6;
+  }
+  &:hover {
+    fill: #1d51a6;
+  }
 }
 
 @media (min-width: 768px) {
@@ -71,7 +71,6 @@
   }
 }
 
-//десктопная версия
 @media (min-width: 1300px) {
   .social__item {
     list-style: none;

@@ -1,6 +1,5 @@
 .screenshot {
   width: 100%;
-  /*ширина для мобильного*/
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -22,14 +21,9 @@
   line-height: 36px;
 }
 
-//планшетная версия
-@media (min-width: 768px) {
-
-}
-
 @media (min-width: 1300px) {
-  .screenshot{
-width: 1220px;
-padding: 0 40px;
-}
+  .screenshot {
+    width: 1220px;
+    padding: 0 40px;
+  }
 }

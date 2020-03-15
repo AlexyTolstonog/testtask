@@ -8,8 +8,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
- background-color: #1d72fe;
-
+  background-color: #1d72fe;
 }
 
 .proposition-image {
@@ -90,15 +89,10 @@
   .proposition-image {
     max-width: 50%;
   }
-
-  .info__content {
-    width: 100%;
-    padding: 0;
-  }
 }
 @media (min-width: 1300px) {
-  .proposition{
-  width: 1220px;
-  padding: 40px 0;
+  .proposition {
+    width: 1220px;
+    padding: 40px 0;
   }
 }

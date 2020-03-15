@@ -1,6 +1,5 @@
 .item {
   width: 280px;
-  /*ширина для мобильного*/
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -23,34 +22,29 @@
   min-height: 100px;
 }
 
-.item_description{
+.item_description {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.item_description-title{
-color: #ffffff;
-font-size: 20px;
-font-weight: 400;
-line-height: 36.01px;
-text-transform: uppercase;
+.item_description-title {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 36.01px;
+  text-transform: uppercase;
 }
 
-.item_description-text{
-color: #ffffff;
-font-size: 16px;
-font-weight: 400;
-line-height: 30.01px;
-}
-
-//планшетная версия
-@media (min-width: 768px) {
-
+.item_description-text {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30.01px;
 }
 
 @media (min-width: 1300px) {
-  .item{
+  .item {
     flex-direction: row;
     width: auto;
     max-width: 633px;

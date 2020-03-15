@@ -7,14 +7,12 @@
   width: 100%;
 }
 
-//планшетная версия
 @media (min-width: 768px) {
   .main {
     width: 100%;
   }
 }
 
-//десктопная версия
 @media (min-width: 1300px) {
   .main {
     width: 100%;

@@ -1,28 +1,26 @@
 .features {
   width: auto;
-  /*ширина для мобильного*/
   padding: 0 20px;
   display: flex;
   align-items: center;
   flex-direction: column;
   background-color: #1d72fe;
 }
-.features_container{
+.features_container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.features-image{
+.features-image {
   max-width: 100%;
 }
-.features_list{
+.features_list {
   display: flex;
   flex-wrap: wrap;
 }
 
-//планшетная версия
 @media (min-width: 768px) {
   .paginator {
     width: 100%;
@@ -34,17 +32,15 @@
   }
 }
 
-//десктопная версия
 @media (min-width: 1300px) {
-  .features_container{
+  .features_container {
     width: 1200px;
     flex-direction: row;
     display: flex;
     flex-wrap: unset;
   }
 
-  .features_list{
+  .features_list {
     flex-direction: column;
-    
   }
 }

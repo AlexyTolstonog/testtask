@@ -11,7 +11,7 @@
 }
 
 .navigation__item--active {
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "Poppins", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -19,9 +19,11 @@
   letter-spacing: 0.08px;
 }
 
-@media (max-width: 767px) {
-  /* стилизация выпадающего меню*/
+.navigation__item-link {
+  font-family: "Poppins", "Arial", sans-serif;
+}
 
+@media (max-width: 767px) {
   .navigation__toggle {
     position: absolute;
     top: 18px;
@@ -56,9 +58,9 @@
 
   .navigation--closed .navigation__toggle:active::before {
     background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3), 0 16px 0 0 rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3),
+      0 16px 0 0 rgba(255, 255, 255, 0.3);
   }
-
 
   .navigation--opened .navigation__toggle {
     top: 25px;
@@ -91,7 +93,6 @@
     }
   }
 
-  /* стилизация ссылок*/
   .navigation__wrapper {
     width: 100%;
   }
@@ -131,7 +132,6 @@
     }
   }
 
-  /*скрытые состояния меню*/
   .navigation--closed .navigation__item {
     display: none;
   }
@@ -145,7 +145,6 @@
   }
 }
 
-//планшетная версия
 @media (min-width: 768px) {
   .navigation {
     flex-direction: row;
@@ -194,15 +193,8 @@
     &:hover {
       opacity: 0.6;
     }
-
   }
-.navigation__item--active{
-  color: white;
-}
-
-}
-
-//десктопная версия
-@media (min-width: 1300px) {
-
+  .navigation__item--active {
+    color: white;
+  }
 }

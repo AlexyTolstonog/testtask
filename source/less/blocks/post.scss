@@ -20,7 +20,7 @@
 }
 .post_image-container {
   position: absolute;
-  top:-60px;
+  top: -60px;
 }
 .post-image {
   border: 1px solid white;
@@ -29,31 +29,22 @@
   height: 118px;
   width: 118px;
 }
-.post-title{
-color: #ffffff;
-line-height: 30px;
-font-size: 18px;
-font-weight: 600;
-text-transform: uppercase;
+.post-title {
+  color: #ffffff;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
-.post-position{
+.post-position {
   font-size: 14px;
   font-weight: 400;
   color: #ffffff;
 }
-.post-text{
-color: #ffffff;
-font-size: 15px;
-font-weight: 400;
-line-height: 26px;
+.post-text {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
 }
 
-//паншетная версия
-@media (min-width: 768px) {
-
-}
-
-//десктопная версия
-@media (min-width: 1300px) {
-
-}

@@ -4,17 +4,19 @@ var gulp = require("gulp");
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
 var less = require("gulp-less");
+var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 var rename = require("gulp-rename");
 var csso = require("gulp-csso");
 
+
 gulp.task("css", function () {
-  return gulp.src("source/less/style.less")
+  return gulp.src("source/less/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
-    .pipe(less())
+    .pipe(sass())
     .pipe(postcss([
       autoprefixer()
     ]))
@@ -24,6 +26,23 @@ gulp.task("css", function () {
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
+
+
+
+// gulp.task("css", function () {
+//   return gulp.src("source/less/style.less")
+//     .pipe(plumber())
+//     .pipe(sourcemap.init())
+//     .pipe(less())
+//     .pipe(postcss([
+//       autoprefixer()
+//     ]))
+//     .pipe(csso())
+//     .pipe(rename("style.min.css"))
+//     .pipe(sourcemap.write("."))
+//     .pipe(gulp.dest("build/css"))
+//     .pipe(server.stream());
+// });
 
 var gulp = require("gulp");
 var imagemin = require("gulp-imagemin");
@@ -43,7 +62,7 @@ gulp.task("images", function () {
 
 gulp.task('js', function () {
   return gulp.src('js/*.js')                 // get the files
-      .pipe(browserSync.stream())                 // browsersync stream
+    .pipe(browserSync.stream())                 // browsersync stream
 });
 
 
@@ -94,7 +113,8 @@ gulp.task("server", function () {
     server: "build/"
   });
 
-  gulp.watch("source/less/**/*.less", gulp.series("css"));
+  
+  // gulp.watch("source/less/**/*.scss", gulp.series("css"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
   gulp.watch("source/js/*.js", gulp.parallel("js", "refresh"));
@@ -111,13 +131,13 @@ gulp.task("start", gulp.series("build", "server"));
 
 gulp.task("copy", function () {
   return gulp.src([
-      "source/fonts/**/*.{woff,woff2}",
-      "source/img/**",
-      "source/js/**",
-      "source/*.ico"
-    ], {
-      base: "source"
-    })
+    "source/fonts/**/*.ttf",
+    "source/img/**",
+    "source/js/**",
+    "source/*.ico"
+  ], {
+    base: "source"
+  })
     .pipe(gulp.dest("build"));
 });
 

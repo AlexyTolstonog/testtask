@@ -77,9 +77,8 @@
     transform: translate(0px, 0);
   }
 }
-//паншетная версия
 @media (min-width: 768px) {
-.slider{
-  align-items: center;
-}
+  .slider {
+    align-items: center;
+  }
 }

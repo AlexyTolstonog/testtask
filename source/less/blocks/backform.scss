@@ -1,6 +1,5 @@
 .backform {
   width: auto;
-  /*ширина для мобильного*/
   padding: 0 20px;
   display: flex;
   align-items: center;
@@ -22,11 +21,11 @@
   font-weight: 300;
   line-height: 25.23px;
 }
-.backform_container{
+.backform_container {
   display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .backform_description {
   background-color: #ffffff;
@@ -75,23 +74,16 @@
   max-width: 100%;
 }
 
-.backform_form{
+.backform_form {
   width: 100%;
-margin-top: 20px;
+  margin-top: 20px;
 }
-//планшетная версия
 @media (min-width: 768px) {
   .backform_description {
     width: 45%;
   }
-  .backform_form{
+  .backform_form {
     width: 45%;
     max-width: 743px;
   }
-
-}
-
-//десктопная версия
-@media (min-width: 1300px) {
-
 }

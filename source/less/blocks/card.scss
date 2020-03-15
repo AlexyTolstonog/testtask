@@ -10,8 +10,6 @@
   border: 1px solid #e6e6e6;
   margin-top: 20px;
   position: relative;
-  -webkit-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.75);
 }
 .card--support::after,
@@ -78,9 +76,6 @@
   font-size: 16px;
   text-align: center;
 }
-
-
-
 .card__interactive {
   display: flex;
   width: 100%;
@@ -88,18 +83,15 @@
   justify-content: space-between;
 }
 
-//паншетная версия
 @media (min-width: 768px) {
   .card {
     border: 1px solid #e6e6e6;
     margin: 5px 5px;
   }
-
 }
 
-//десктопная версия
 @media (min-width: 1300px) {
- .card{
-   padding: 50px 20px;
- }
+  .card {
+    padding: 50px 20px;
+  }
 }

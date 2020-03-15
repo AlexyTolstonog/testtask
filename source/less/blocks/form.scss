@@ -34,7 +34,6 @@
     border: 2px solid #226be2;
 }
 
-//планшетная версия
 @media (min-width: 768px) {
   .form{
     align-items: flex-start;
@@ -44,7 +43,6 @@
 }
 }
 
-//десктопная версия
 @media (min-width: 1300px) {
   .paginator {
     justify-content: flex-start;
