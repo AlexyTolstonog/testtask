@@ -118,7 +118,6 @@
     }
   })
 
-
   let modal = document.querySelector('.modal');
   modal.style.display = 'none';
   let modalButtonSend = document.querySelector('.form_send-button');

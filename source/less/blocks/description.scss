@@ -9,6 +9,7 @@
   margin-left: 11px;
   min-width: 320px;
   min-height: 200px;
+  background-color: #4085f6;
 }
 
 .description-headline {
@@ -42,6 +43,12 @@
   font-size: 38px;
   margin: 16px auto;
 }
-.description-limited{
+.description-limited {
   margin: 0 auto;
+}
+
+@media (min-width: 1300px) {
+  .description {
+    background-color: white;
+  }
 }

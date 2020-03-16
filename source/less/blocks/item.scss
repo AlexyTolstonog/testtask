@@ -50,5 +50,15 @@
     flex-direction: row;
     width: auto;
     max-width: 633px;
+    align-items: flex-start;
+  }
+  .item_image{
+    min-width: 77px;
+    min-height: 77px;
+  }
+
+  .item_description{
+    align-items: start;
+    padding: 0px 37px;
   }
 }

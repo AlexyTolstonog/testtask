@@ -1,4 +1,4 @@
-.cards{
+.cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -98,7 +98,26 @@
 }
 
 @media (min-width: 1300px) {
+  .cards {
+    margin-top: 62px;
+    justify-content: start;
+    margin-bottom: 179px;
+  }
   .card {
     padding: 50px 20px;
+    margin-left: 70px;
+  }
+
+  .card--support::before,
+  .card--privacy::before,
+  .card--download::before {
+    width: 70px;
+    height: 70px;
+    left: 39%;
+  }
+  .card--support::after,
+  .card--privacy::after,
+  .card--download::after {
+    top: 19%;
   }
 }

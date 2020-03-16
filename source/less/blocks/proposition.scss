@@ -72,6 +72,9 @@
   font-weight: 400;
   display: flex;
   flex-direction: column;
+  width: 230px;
+  height: 81px;
+  border-radius: 50px;
 }
 
 .proposition_button-description {
@@ -81,10 +84,10 @@
   font-weight: 400;
 }
 
-.proposition_button-title{
+.proposition_button-title {
   font-family: "Montserrat-SemiBold";
-font-size: 19px;
-font-weight: 600;
+  font-size: 19px;
+  font-weight: 600;
 }
 
 //планшетная версия
@@ -107,7 +110,25 @@ font-weight: 600;
 }
 @media (min-width: 1300px) {
   .proposition {
+    position: relative;
     width: 1220px;
-    padding: 40px 0;
+    padding: 0;
+    align-items: flex-start;
+    background-color: inherit;
+  }
+  .proposition-image {
+    margin: -15px -45px;
+  }
+  .proposition_description {
+    margin: 170px 0 0 186px;
+  }
+
+  .proposition_description-title {
+    line-height: 62px;
+    font-size: 42px;
+    text-align: right;
+  }
+  .proposition_button{
+    margin: 19px 0 0 32px;
   }
 }

@@ -33,12 +33,13 @@
   text-align: center;
   bottom: 13px;
   margin: 0 auto;
+  margin-top: 30px;
 }
 .slider-dots_item {
   cursor: pointer;
-  height: 6px;
-  width: 6px;
-  margin: 0;
+  height: 15px;
+  width: 15px;
+  margin: 3px;
   background-color: #ddd;
   border-radius: 50%;
   display: inline-block;
@@ -82,4 +83,12 @@
   .slider {
     align-items: center;
   }
+}
+@media (min-width: 1300px) {
+  .slider{
+    background-color:#4085f6 ;
+  }
+.slider_container{
+  background-color: white;
+}
 }

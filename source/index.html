@@ -1,439 +1,716 @@
 <!DOCTYPE html>
 <html lang="ru">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      <link rel="preload" href="/fonts/Raleway-SemiBold.ttf" as="font" crossorigin="anonymous">
-      <link rel="preload" href="/fonts/Montserrat-Black.ttf" as="font" crossorigin="anonymous">
-      <link rel="preload" href="fonts/Poppins-Black.ttf" as="font" crossorigin="anonymous">
-      <link rel="preload" href="fonts/Poppins-Regular.ttf" as="font" crossorigin="anonymous">
-      <link rel="preload" href="/fonts/Montserrat-SemiBold.ttf" as="font" crossorigin="anonymous">
-      <link rel="preload" href="/fonts/Poppins-SemiBold.ttf" as="font" crossorigin="anonymous">
-      <link href="css/style.min.css" rel="stylesheet">
-      <script>
-         document.createElement("picture");
-         
-      </script>
-      <script src="js/picturefill.min.js" async></script>
-      <title>some test</title>
-   </head>
-   <body>
-     <!-- <div class="romb"></div> -->
-      <div style="display:none">
-         <include src="build/img/sprite.svg"></include>
-      </div>
-      <header class="header" id="home">
-         <section class="container">
-            <div class="header__container">
-               <a class="header__container-linck" href="index.html">
-                  <h1 class="header__container-linck-header">uixrex</h1>
-               </a>
-               <nav class="navigation navigation--closed navigation--nojs">
-                  <button class="navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-                  <div class="navigation__wrapper">
-                     <ul class="navigation__list">
-                        <li class="navigation__item navigation__item--active"><a class="navigation__item-link" href="home">Home
-                           </a>
-                        </li>
-                        <li class="navigation__item"><a class="navigation__item-link" href="about"> About
-                           </a>
-                        </li>
-                        <li class="navigation__item"><a class="navigation__item-link" href="features">Features</a></li>
-                        <li class="navigation__item"><a class="navigation__item-link" href="pricing">Pricing</a></li>
-                        <li class="navigation__item"><a class="navigation__item-link" href="screenshot">Screenshot</a></li>
-                        <li class="navigation__item"><a class="navigation__item-link" href="contact">Contact</a></li>
-                     </ul>
-                  </div>
-               </nav>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="preload"
+      href="/fonts/Raleway-SemiBold.ttf"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/Montserrat-Black.ttf"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/Poppins-Black.ttf"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/Poppins-Regular.ttf"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/Montserrat-SemiBold.ttf"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/Poppins-SemiBold.ttf"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link href="css/style.min.css" rel="stylesheet" />
+    <script>
+      document.createElement("picture");
+    </script>
+    <script src="js/picturefill.min.js" async></script>
+    <title>some test</title>
+  </head>
+  <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    <header class="header" id="home">
+      <section class="container">
+        <div class="header__container">
+          <a class="header__container-linck" href="index.html">
+            <h1 class="header__container-linck-header">uixrex</h1>
+          </a>
+          <nav class="navigation navigation--closed navigation--nojs">
+            <button class="navigation__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+            <div class="navigation__wrapper">
+              <ul class="navigation__list">
+                <li class="navigation__item navigation__item--active">
+                  <a class="navigation__item-link" href="home">Home </a>
+                </li>
+                <li class="navigation__item">
+                  <a class="navigation__item-link" href="about"> About </a>
+                </li>
+                <li class="navigation__item">
+                  <a class="navigation__item-link" href="features">Features</a>
+                </li>
+                <li class="navigation__item">
+                  <a class="navigation__item-link" href="pricing">Pricing</a>
+                </li>
+                <li class="navigation__item">
+                  <a class="navigation__item-link" href="screenshot"
+                    >Screenshot</a
+                  >
+                </li>
+                <li class="navigation__item">
+                  <a class="navigation__item-link" href="contact">Contact</a>
+                </li>
+              </ul>
             </div>
-            <a class="button button--try" href="#">Try for free</a>
-         </section>
-      </header>
-      <main class="main">
-         <section class="description">
-         <section class="proposition">
-            <img class="proposition-image" src="img/Phone.png" alt="phone">
-            <section class=" proposition_description">
-               <h1 class="proposition_description-title">The Best App to Increase
-                  Your Productivity
-               </h1>
-               <p class="proposition_description-text">A mobile app is a computer program designed to run on a 
-                  mobile device such as a phone/tablet or watch.
-               </p>
-               <article class="proposition_description-button-container">
-                  <a class="proposition_button button button--app-store" href="#">
-                     <span class="proposition_button-description">Get It From</span><span class="proposition_button-title">App store</span>
-                  </a>
-                  <a class="proposition_button button button--play-store" href="https://www.apple.com/ru/ios/app-store/">
-                     <span class="proposition_button-description">Get It From</span>
-                     <span class="proposition_button-title">Play store</span>
-                  </a>
-               </article>
-            </section>
-         </section>
-         <section class="about" id="about">
+          </nav>
+        </div>
+        <a class="button header__button button--try" href="#">Try for free</a>
+      </section>
+    </header>
+    <main class="main">
+      <section class="description">
+        <section class="proposition">
+          <div class="figure figure--romb"></div>
+          <div class="figure figure--ball"></div>
+          <img class="proposition-image" src="img/Phone.png" alt="phone" />
+          <section class=" proposition_description">
+            <h1 class="proposition_description-title">
+              The Best App to Increase Your Productivity
+            </h1>
+            <p class="proposition_description-text">
+              A mobile app is a computer program designed to run on a mobile
+              device such as a phone/tablet or watch.
+            </p>
+            <article class="proposition_description-button-container">
+              <a class="proposition_button button button--app-store" href="#">
+                <span class="proposition_button-description">Get It From</span
+                ><span class="proposition_button-title">App store</span>
+              </a>
+              <a
+                class="proposition_button button button--play-store"
+                href="https://www.apple.com/ru/ios/app-store/"
+              >
+                <span class="proposition_button-description">Get It From</span>
+                <span class="proposition_button-title">Play store</span>
+              </a>
+            </article>
+          </section>
+        </section>
+        <section class="about" id="about">
+          <section class="about_container">
             <h2 class="about-title">About The App</h2>
-            <p class="about-text">Writers and stars of Veep have responded incredulously to the news an Australian politician
-               required preinstalled stitches way  email client, calendar, mapping program.
+            <p class="about-text">
+              Writers and stars of Veep have responded incredulously to the news
+              an Australian politician required preinstalled stitches way email
+              client, calendar, mapping program.
             </p>
             <section class="cards">
-               <article class="card card--support">
-                  <span class="card-img"></span>
-                  <strong class="card-title">24/7 Support</strong>
-                  <p class="card-text">Apps that are not preinstalled are usually available through distribution platforms called app stores.</p>
-               </article>
-               <article class="card card--privacy">
-                  <strong class="card-title">Data Privacy</strong>
-                  <p class="card-text">Apps that are not preinstalled are usually available through distribution platforms called app stores.</p>
-               </article>
-               <article class="card card--download">
-                  <strong class="card-title">Easy Download</strong>
-                  <p class="card-text">Apps that are not preinstalled are usually available through distribution platforms called app stores.</p>
-               </article>
+              <article class="card card--support">
+                <span class="card-img"></span>
+                <strong class="card-title">24/7 Support</strong>
+                <p class="card-text">
+                  Apps that are not preinstalled are usually available through
+                  distribution platforms called app stores.
+                </p>
+              </article>
+              <article class="card card--privacy">
+                <strong class="card-title">Data Privacy</strong>
+                <p class="card-text">
+                  Apps that are not preinstalled are usually available through
+                  distribution platforms called app stores.
+                </p>
+              </article>
+              <article class="card card--download">
+                <strong class="card-title">Easy Download</strong>
+                <p class="card-text">
+                  Apps that are not preinstalled are usually available through
+                  distribution platforms called app stores.
+                </p>
+              </article>
             </section>
-         </section>
-         <section class="features" id="features">
-            <h2 class="proposition_description-title">Features The App</h2>
-            <p class="proposition_description-text">A mobile app is a computer program designed to run on a 
-               mobile device such as a phone/tablet or watch.
-            </p>
-            <section class=" features_container">
-               <img class="features-image" src="img/hero-img.png" alt="phone">
-               <section class="features_list">
-                  <section class="item">
-                     <article class="item_image">
-                        <img class="item_image-image"  src="img/design.png" alt="">
-                     </article>
-                     <article class="item_description">
-                        <strong class="item_description-title">CREATIVE DESIGN</strong>
-                        <p class="item_description-text">Lorem ipsum dolor sit amet, consectet adop adipisicing elit, sed do eiusmod temporara. Another projects managed with a easy design is what we stand for.incididunt ugt labore.</p>
-                     </article>
-                  </section>
-                  <section class="item">
-                     <article class="item_image">
-                        <img class="item_image-image"  src="img/featured-icon5.png" alt="">
-                     </article>
-                     <article class="item_description">
-                        <strong class="item_description-title">CREATIVE DESIGN</strong>
-                        <p class="item_description-text">Lorem ipsum dolor sit amet, consectet adop adipisicing elit, sed do eiusmod temporara. Another projects managed with a easy design is what we stand for.incididunt ugt labore.</p>
-                     </article>
-                  </section>
-                  <section class="item">
-                     <article class="item_image">
-                        <img class="item_image-image"  src="img/featured-icon1.png" alt="">
-                     </article>
-                     <article class="item_description">
-                        <strong class="item_description-title">CREATIVE DESIGN</strong>
-                        <p class="item_description-text">Lorem ipsum dolor sit amet, consectet adop adipisicing elit, sed do eiusmod temporara. Another projects managed with a easy design is what we stand for.incididunt ugt labore.</p>
-                     </article>
-                  </section>
-                  <section class="item">
-                     <article class="item_image">
-                        <img class="item_image-image"  src="img/code-alt.png" alt="">
-                     </article>
-                     <article class="item_description">
-                        <strong class="item_description-title">CREATIVE DESIGN</strong>
-                        <p class="item_description-text">Lorem ipsum dolor sit amet, consectet adop adipisicing elit, sed do eiusmod temporara. Another projects managed with a easy design is what we stand for.incididunt ugt labore.</p>
-                     </article>
-                  </section>
-               </section>
-            </section>
-         </section>
-         <section class="pricing" id="pricing">
-            <h2 class="pricing_description-title">Pricing Plan</h2>
-            <p class="pricing_description-text">Writers and stars of Veep have responded incredulously to the news an Australian politician
-               required preinstalled stitches way  email client, calendar, mapping program.
-            </p>
-            <section class="border_cards">
-               <article class="border_card">
-                  <h3 class="border_card-title">Basic</h3>
-                  <p class="border_card-price">$00</p>
-                  <p class="border_card-access">Limited access</p>
-                  <ul class="border_card-access-rights">
-                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>100 MB Disk Space</li>
-                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>2 Subdo mains</li>
-                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>5 Email Accounts</li>
-                     <li class="border_card-access-right border_card-access-right--false"><span class="close"></span>No License</li>
-                     <li class="border_card-access-right border_card-access-right--false"><span class="close"></span>Phone & Mail Support</li>
-                  </ul>
-                  <a class="border_card-button button" href="#">PURCHASE</a>
-               </article>
-               <article class="border_card">
-                  <h3 class="border_card-title">Professional</h3>
-                  <p class="border_card-price">$12</p>
-                  <p class="border_card-access">Limited access</p>
-                  <ul class="border_card-access-rights">
-                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>100 MB Disk Space</li>
-                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>2 Subdo mains</li>
-                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>5 Email Accounts</li>
-                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>No License</li>
-                     <li class="border_card-access-right border_card-access-right--false"><span class="close"></span>Phone & Mail Support</li>
-                  </ul>
-                  <a class="border_card-button button" href="#">PURCHASE</a>
-               </article>
-               <article class="border_card">
-                  <h3 class="border_card-title">Business</h3>
-                  <p class="border_card-price">$22</p>
-                  <p class="border_card-access">Limited access</p>
-                  <ul class="border_card-access-rights">
-                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>100 MB Disk Space</li>
-                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>2 Subdo mains</li>
-                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>5 Email Accounts</li>
-                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>No License</li>
-                     <li class="border_card-access-right border_card-access-right--true"><span class="close"></span>Phone & Mail Support</li>
-                  </ul>
-                  <a class="border_card-button button" href="#">PURCHASE</a>
-               </article>
-            </section>
-         </section>
-         <section class="screenshot" id="screenshot">
-            <h2 class="screenshot_description-title">App Screenshots</h2>
-            <p class="screenshot_description-text">Most such devices are sold with several apps bundled as pre-installed software, 
-               such as a web browser, email client, calendar, mapping program.
-            </p>
-            <section class="slider_container">
-
-              <section class="slider_container-owl">
-               <div class="owl-carousel owl-theme owl-loaded owl-drag">
-                  <div class="owl-stage-outer">
-                     <div class="owl-stage">
-                        <div class="owl-item" >
-                           <img class="owl-image" src="img/06_copy_4.png" alt="">
-                        </div>
-                        <div class="owl-item">
-                           <img class="owl-image" src="img/06_copy_5.png" alt="">
-                        </div>
-                        <div class="owl-item">
-                           <img class="owl-image" src="img/06_copy_6.png" alt="">
-                        </div>
-                        <div class="owl-item">
-                           <img class="owl-image" class="owl_item-image" src="img/06_copy_7.png" alt="">
-                        </div>
-                        <div class="owl-item">
-                           <img class="owl-image"  src="img/06_copy_8.png" alt="">
-                        </div>
-                     </div>
-                  </div>
-               </div>
+          </section>
+        </section>
+        <section class="features" id="features">
+          <h2 class="features_description-title">Features The App</h2>
+          <p class="features_description-text">
+            A mobile app is a computer program designed to run on a mobile
+            device such as a phone/tablet or watch.
+          </p>
+          <section class="features_container">
+            <img class="features-image" src="img/hero-img.png" alt="phone" />
+            <section class="features_list">
+              <section class="item">
+                <article class="item_image">
+                  <img class="item_image-image" src="img/design.png" alt="" />
+                </article>
+                <article class="item_description">
+                  <strong class="item_description-title"
+                    >CREATIVE DESIGN</strong
+                  >
+                  <p class="item_description-text">
+                    Lorem ipsum dolor sit amet, consectet adop adipisicing elit,
+                    sed do eiusmod temporara. Another projects managed with a
+                    easy design is what we stand for.incididunt ugt labore.
+                  </p>
+                </article>
               </section>
-               <section class="slider">
-                  <h4 class="slider-title">Some Talk of Our Clients</h4>
-                  <section class="slider_item">
-                     <section class="post-container">
-                        <section class="post">
-                           <article class="post_image-container">
-                              <img class="post-image" src="img/ava-men.png" alt="avatar">
-                           </article>
-                           <strong class="post-title">oliver gomes</strong>
-                           <p class="post-position">CEO of google</p>
-                           <p class="post-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,good.</p>
-                        </section>
-                        <section class="post">
-                           <article class="post_image-container">
-                              <img class="post-image" src="img/ava-wooman.png" alt="avatar">
-                           </article>
-                           <strong class="post-title">Rita watson</strong>
-                           <p class="post-position">Web Designer</p>
-                           <p class="post-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,good.</p>
-                        </section>
-                     </section>
-                  </section>
-                  <section class="slider_item">
-                     <section class="post-container">
-                        <section class="post">
-                           <article class="post_image-container">
-                              <img class="post-image" src="img/ava-men.png" alt="avatar">
-                           </article>
-                           <strong class="post-title">oliver gomes</strong>
-                           <p class="post-position">CEO of google</p>
-                           <p class="post-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,good.</p>
-                        </section>
-                        <section class="post">
-                           <article class="post_image-container">
-                              <img class="post-image" src="img/ava-wooman.png" alt="avatar">
-                           </article>
-                           <strong class="post-title">Rita watson</strong>
-                           <p class="post-position">Web Designer</p>
-                           <p class="post-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,good.</p>
-                        </section>
-                     </section>
-                  </section>
-                  <section class="slider_item">
-                     <section class="post-container">
-                        <section class="post">
-                           <article class="post_image-container">
-                              <img class="post-image" src="img/ava-men.png" alt="avatar">
-                           </article>
-                           <strong class="post-title">oliver gomes</strong>
-                           <p class="post-position">CEO of google</p>
-                           <p class="post-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,good.</p>
-                        </section>
-                        <section class="post">
-                           <article class="post_image-container">
-                              <img class="post-image" src="img/ava-wooman.png" alt="avatar">
-                           </article>
-                           <strong class="post-title">Rita watson</strong>
-                           <p class="post-position">Web Designer</p>
-                           <p class="post-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,good.</p>
-                        </section>
-                     </section>
-                  </section>
-                  <div class="slider-dots">
-                     <span class="slider-dots_item" id="1"></span>
-                     <span class="slider-dots_item" id="2"></span>
-                     <span class="slider-dots_item" id="3"></span>
-                  </div>
-               </section>
+              <section class="item">
+                <article class="item_image">
+                  <img
+                    class="item_image-image"
+                    src="img/featured-icon5.png"
+                    alt=""
+                  />
+                </article>
+                <article class="item_description">
+                  <strong class="item_description-title"
+                    >CREATIVE DESIGN</strong
+                  >
+                  <p class="item_description-text">
+                    Lorem ipsum dolor sit amet, consectet adop adipisicing elit,
+                    sed do eiusmod temporara. Another projects managed with a
+                    easy design is what we stand for.incididunt ugt labore.
+                  </p>
+                </article>
+              </section>
+              <section class="item">
+                <article class="item_image">
+                  <img
+                    class="item_image-image"
+                    src="img/featured-icon1.png"
+                    alt=""
+                  />
+                </article>
+                <article class="item_description">
+                  <strong class="item_description-title"
+                    >CREATIVE DESIGN</strong
+                  >
+                  <p class="item_description-text">
+                    Lorem ipsum dolor sit amet, consectet adop adipisicing elit,
+                    sed do eiusmod temporara. Another projects managed with a
+                    easy design is what we stand for.incididunt ugt labore.
+                  </p>
+                </article>
+              </section>
+              <section class="item">
+                <article class="item_image">
+                  <img class="item_image-image" src="img/code-alt.png" alt="" />
+                </article>
+                <article class="item_description">
+                  <strong class="item_description-title"
+                    >CREATIVE DESIGN</strong
+                  >
+                  <p class="item_description-text">
+                    Lorem ipsum dolor sit amet, consectet adop adipisicing elit,
+                    sed do eiusmod temporara. Another projects managed with a
+                    easy design is what we stand for.incididunt ugt labore.
+                  </p>
+                </article>
+              </section>
             </section>
-         </section>
-         <section class="backform" id="contact">
-            <h2 class="backform-title">Say Hello To Us!</h2>
-            <p class="backform-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. et dolore magna aliqua..</p>
-            <section class="backform_container">
-               <section class="backform_description">
-                  <article class="backform_description-info backform_description-info--location">
-                     <p class="backform_description-info-name backform_description-info-name--location">location</p>
-                     <p class="backform_description-info-description">Jurain,Dhaka Bangladesh</p>
-                  </article>
-                  <article class="backform_description-info backform_description-info--phone">
-                     <p class="backform_description-info-name backform_description-info-name--phone">phone</p>
-                     <p class="backform_description-info-description">+1234321321</p>
-                  </article>
-                  <article class="backform_description-info backform_description-info--mail">
-                     <p class="backform_description-info-name backform_description-info-name--mail">e-mail</p>
-                     <p class="backform_description-info-description">websitename@mail.com</p>
-                  </article>
-               </section>
-               <section class="backform_form">
-                  <form action="#" class="form">
-                     <input class="form_send-field form_send-field--name" type="text" name="name" value="" placeholder="Name" id="name">
-                     <input class="form_send-field form_send-field--email" type="email" name="email" value="" placeholder="E-mail" id="email">
-                     <textarea class="form_send-field form_send-field--message" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                     <button class="form_send-button">Send Message</button>
-                  </form>
-               </section>
-               <section class="modal">
-                  <div class="modal_container">
-                     <a href="#" class="modal_button-close modal_button-close--rownd"></a>
-                     <h2 class="modal-title">Thank you! Message sent</h2>
-                     <a href="#" class="button modal_button-close modal_button-close--long">Okay,bro</a>
-                  </div>
-               </section>
-            </section>
-         </section>
-         <section class="map">
-            <iframe class="map-item"
-               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.6296389356044!2d30.32212272883606!3d59.938287541277234!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8403eb878242dbd5!2z0JTQvtGF0L7QtNC90YvQuSDQtNC-0Lwg0J0uINCQLiDQnNC10LvRjNGG0LXRgNCw!5e0!3m2!1sru!2sua!4v1557044802093!5m2!1sru!2sua"
-               width="800" height="365" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-         </section>
-      </main>
-      <footer class="footer">
-         <section class="footer__container">
-            <p class="footer-text">Copyright © 2018 UIXREX, All rights Reserved.</p>
-            <article class="footer__interactive">
-               <ul class="social__list">
-                  <li class="social__item">
-                     <a href="#" class="social__link social__link--facebook">
-                        <svg focusable="false" class="link-icon" width="12" height="19">
-                           <use xlink:href="#icon-face"></use>
-                        </svg>
-                     </a>
-                  </li>
-                  <li class="social__item">
-                     <a href="#" class="social__link social__link--twitter">
-                        <svg focusable="false" class="link-icon" width="12" height="19">
-                           <use xlink:href="#icon-twi"></use>
-                        </svg>
-                     </a>
-                  </li>
-                  <li class="social__item">
-                     <a href="#" class="social__link social__link--insta">
-                        <svg focusable="false" class="link-icon" width="12" height="19">
-                           <use xlink:href="#icon-inst"></use>
-                        </svg>
-                     </a>
-                  </li>
-                  <li class="social__item">
-                     <a href="#" class="social__link social__link--facebook">
-                        <svg focusable="false" class="link-icon" width="12" height="19">
-                           <use xlink:href="#icon-face"></use>
-                        </svg>
-                     </a>
-                  </li>
-                  <li class="social__item">
-                     <a href="#" class="social__link social__link--twitter">
-                        <svg focusable="false" class="link-icon" width="12" height="19">
-                           <use xlink:href="#icon-twi"></use>
-                        </svg>
-                     </a>
-                  </li>
-                  <li class="social__item">
-                     <a href="#" class="social__link social__link--insta">
-                        <svg focusable="false" class="link-icon" width="12" height="19">
-                           <use xlink:href="#icon-inst"></use>
-                        </svg>
-                     </a>
-                  </li>
-               </ul>
+          </section>
+        </section>
+        <section class="pricing" id="pricing">
+          <h2 class="pricing_description-title">Pricing Plan</h2>
+          <p class="pricing_description-text">
+            Writers and stars of Veep have responded incredulously to the news
+            an Australian politician required preinstalled stitches way email
+            client, calendar, mapping program.
+          </p>
+          <section class="border_cards">
+            <article class="border_card">
+              <h3 class="border_card-title">Basic</h3>
+              <p class="border_card-price">$00</p>
+              <p class="border_card-access">Limited access</p>
+              <ul class="border_card-access-rights">
+                <li
+                  class="border_card-access-right border_card-access-right--true"
+                >
+                  <span class="close"></span>100 MB Disk Space
+                </li>
+                <li
+                  class="border_card-access-right border_card-access-right--true"
+                >
+                  <span class="close"></span>2 Subdo mains
+                </li>
+                <li
+                  class="border_card-access-right border_card-access-right--true"
+                >
+                  <span class="close"></span>5 Email Accounts
+                </li>
+                <li
+                  class="border_card-access-right border_card-access-right--false"
+                >
+                  <span class="close"></span>No License
+                </li>
+                <li
+                  class="border_card-access-right border_card-access-right--false"
+                >
+                  <span class="close"></span>Phone & Mail Support
+                </li>
+              </ul>
+              <a class="border_card-button button" href="#">PURCHASE</a>
             </article>
-         </section>
-      </footer>
-      <script>
-         var navMain = document.querySelector('.navigation');
-         var navToggle = document.querySelector('.navigation__toggle');
-         
-         navMain.classList.remove('navigation--nojs');
-         
-         navToggle.addEventListener('click', function () {
-           if (navMain.classList.contains('navigation--closed')) {
-             navMain.classList.remove('navigation--closed');
-             navMain.classList.add('navigation--opened');
-           } else {
-             navMain.classList.add('navigation--closed');
-             navMain.classList.remove('navigation--opened');
-           }
-         });
-         
-         
-         
-      
-      </script>
-      <script src="js/jquery.min.js"></script>
-      <script src="js/owl.carousel.min.js"></script>
-      <script src="js/index.js"></script>
-      <script src="js/svgxuse.min.js"></script>
-      <script src="js/svgforeverybody.min.js"> </script>
-      <script>
-         $(document).ready(function(){
-           $('.owl-carousel').owlCarousel({
-             loop:true,
-         margin:10,
-         loop:true,
-         nav:true,
-         autoplay:false,
-         autoplayTimeout:4000,
-         autoplayHoverPause:false,
-         responsiveClass:true,
-         responsive:{
-             0:{
-                 items:1,
-             },
-             700:{
-                 items:2
-             },
-             1000:{
-                 items:3,
-             },
-         }
-         })
-         
-         })
-         $('.play').on('click',function(){
-         owl.trigger('play.owl.autoplay',[1000])
-         })
-         $('.stop').on('click',function(){
-         owl.trigger('stop.owl.autoplay')
-         });
-      </script>
-   </body>
+            <article class="border_card">
+              <h3 class="border_card-title">Professional</h3>
+              <p class="border_card-price">$12</p>
+              <p class="border_card-access">Limited access</p>
+              <ul class="border_card-access-rights">
+                <li
+                  class="border_card-access-right border_card-access-right--true"
+                >
+                  <span class="close"></span>100 MB Disk Space
+                </li>
+                <li
+                  class="border_card-access-right border_card-access-right--true"
+                >
+                  <span class="close"></span>2 Subdo mains
+                </li>
+                <li
+                  class="border_card-access-right border_card-access-right--true"
+                >
+                  <span class="close"></span>5 Email Accounts
+                </li>
+                <li
+                  class="border_card-access-right border_card-access-right--true"
+                >
+                  <span class="close"></span>No License
+                </li>
+                <li
+                  class="border_card-access-right border_card-access-right--false"
+                >
+                  <span class="close"></span>Phone & Mail Support
+                </li>
+              </ul>
+              <a class="border_card-button button" href="#">PURCHASE</a>
+            </article>
+            <article class="border_card">
+              <h3 class="border_card-title">Business</h3>
+              <p class="border_card-price">$22</p>
+              <p class="border_card-access">Limited access</p>
+              <ul class="border_card-access-rights">
+                <li
+                  class="border_card-access-right border_card-access-right--true"
+                >
+                  <span class="close"></span>100 MB Disk Space
+                </li>
+                <li
+                  class="border_card-access-right border_card-access-right--true"
+                >
+                  <span class="close"></span>2 Subdo mains
+                </li>
+                <li
+                  class="border_card-access-right border_card-access-right--true"
+                >
+                  <span class="close"></span>5 Email Accounts
+                </li>
+                <li
+                  class="border_card-access-right border_card-access-right--true"
+                >
+                  <span class="close"></span>No License
+                </li>
+                <li
+                  class="border_card-access-right border_card-access-right--true"
+                >
+                  <span class="close"></span>Phone & Mail Support
+                </li>
+              </ul>
+              <a class="border_card-button button" href="#">PURCHASE</a>
+            </article>
+          </section>
+        </section>
+        <section class="screenshot" id="screenshot">
+          <section class=" screenshot_container">
+            <h2 class="screenshot_description-title">App Screenshots</h2>
+            <p class="screenshot_description-text">
+              Most such devices are sold with several apps bundled as
+              pre-installed software, such as a web browser, email client,
+              calendar, mapping program.
+            </p>
+            <section class="slider_container slider_container">
+              <section class="slider_container-owl">
+                <div class="owl-carousel owl-theme owl-loaded owl-drag">
+                  <div class="owl-stage-outer">
+                    <div class="owl-stage">
+                      <div class="owl-item">
+                        <img class="owl-image" src="img/06_copy_4.png" alt="" />
+                      </div>
+                      <div class="owl-item">
+                        <img class="owl-image" src="img/06_copy_5.png" alt="" />
+                      </div>
+                      <div class="owl-item">
+                        <img class="owl-image" src="img/06_copy_6.png" alt="" />
+                      </div>
+                      <div class="owl-item">
+                        <img
+                          class="owl-image"
+                          class="owl_item-image"
+                          src="img/06_copy_7.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="owl-item">
+                        <img class="owl-image" src="img/06_copy_8.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </section>
+            <section class="slider_container slider_container--client">
+              <section class="slider">
+                <h4 class="slider-title">Some Talk of Our Clients</h4>
+                <section class="slider_item">
+                  <section class="post-container">
+                    <section class="post">
+                      <article class="post_image-container">
+                        <img
+                          class="post-image"
+                          src="img/ava-men.png"
+                          alt="avatar"
+                        />
+                      </article>
+                      <strong class="post-title">oliver gomes</strong>
+                      <p class="post-position">CEO of google</p>
+                      <p class="post-text">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the
+                        1500s,good.
+                      </p>
+                    </section>
+                    <section class="post">
+                      <article class="post_image-container">
+                        <img
+                          class="post-image"
+                          src="img/ava-wooman.png"
+                          alt="avatar"
+                        />
+                      </article>
+                      <strong class="post-title">Rita watson</strong>
+                      <p class="post-position">Web Designer</p>
+                      <p class="post-text">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the
+                        1500s,good.
+                      </p>
+                    </section>
+                  </section>
+                </section>
+                <section class="slider_item">
+                  <section class="post-container">
+                    <section class="post">
+                      <article class="post_image-container">
+                        <img
+                          class="post-image"
+                          src="img/ava-men.png"
+                          alt="avatar"
+                        />
+                      </article>
+                      <strong class="post-title">oliver gomes</strong>
+                      <p class="post-position">CEO of google</p>
+                      <p class="post-text">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the
+                        1500s,good.
+                      </p>
+                    </section>
+                    <section class="post">
+                      <article class="post_image-container">
+                        <img
+                          class="post-image"
+                          src="img/ava-wooman.png"
+                          alt="avatar"
+                        />
+                      </article>
+                      <strong class="post-title">Rita watson</strong>
+                      <p class="post-position">Web Designer</p>
+                      <p class="post-text">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the
+                        1500s,good.
+                      </p>
+                    </section>
+                  </section>
+                </section>
+                <section class="slider_item">
+                  <section class="post-container">
+                    <section class="post">
+                      <article class="post_image-container">
+                        <img
+                          class="post-image"
+                          src="img/ava-men.png"
+                          alt="avatar"
+                        />
+                      </article>
+                      <strong class="post-title">oliver gomes</strong>
+                      <p class="post-position">CEO of google</p>
+                      <p class="post-text">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the
+                        1500s,good.
+                      </p>
+                    </section>
+                    <section class="post">
+                      <article class="post_image-container">
+                        <img
+                          class="post-image"
+                          src="img/ava-wooman.png"
+                          alt="avatar"
+                        />
+                      </article>
+                      <strong class="post-title">Rita watson</strong>
+                      <p class="post-position">Web Designer</p>
+                      <p class="post-text">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the
+                        1500s,good.
+                      </p>
+                    </section>
+                  </section>
+                </section>
+                <div class="slider-dots">
+                  <span class="slider-dots_item" id="1"></span>
+                  <span class="slider-dots_item" id="2"></span>
+                  <span class="slider-dots_item" id="3"></span>
+                </div>
+              </section>
+            </section>
+          </section>
+        </section>
+
+      <section class="backform" id="contact">
+        <section class="backform_wrapper">
+          <h2 class="backform-title">Say Hello To Us!</h2>
+          <p class="backform-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore. et dolore magna aliqua..
+          </p>
+          <section class="backform_container">
+            <section class="backform_description">
+              <article
+                class="backform_description-info backform_description-info--location"
+              >
+                <p
+                  class="backform_description-info-name backform_description-info-name--location"
+                >
+                  location
+                </p>
+                <p class="backform_description-info-description">
+                  Jurain,Dhaka Bangladesh
+                </p>
+              </article>
+              <article
+                class="backform_description-info backform_description-info--phone"
+              >
+                <p
+                  class="backform_description-info-name backform_description-info-name--phone"
+                >
+                  phone
+                </p>
+                <p class="backform_description-info-description">+1234321321</p>
+              </article>
+              <article
+                class="backform_description-info backform_description-info--mail"
+              >
+                <p
+                  class="backform_description-info-name backform_description-info-name--mail"
+                >
+                  e-mail
+                </p>
+                <p class="backform_description-info-description">
+                  websitename@mail.com
+                </p>
+              </article>
+            </section>
+            <section class="backform_form">
+              <form action="#" class="form">
+                <input
+                  class="form_send-field form_send-field--name"
+                  type="text"
+                  name="name"
+                  value=""
+                  placeholder="Name"
+                  id="name"
+                />
+                <input
+                  class="form_send-field form_send-field--email"
+                  type="email"
+                  name="email"
+                  value=""
+                  placeholder="E-mail"
+                  id="email"
+                />
+                <textarea
+                  class="form_send-field form_send-field--message"
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="10"
+                  placeholder="Message"
+                ></textarea>
+                <button class="form_send-button">Send Message</button>
+              </form>
+            </section>
+            <section class="modal">
+              <div class="modal_container">
+                <a
+                  href="#"
+                  class="modal_button-close modal_button-close--rownd"
+                ></a>
+                <h2 class="modal-title">Thank you! Message sent</h2>
+                <a
+                  href="#"
+                  class="button modal_button-close modal_button-close--long"
+                  >Okay,bro</a
+                >
+              </div>
+            </section>
+          </section>
+        </section>
+      </section>
+      <section class="map">
+        <iframe
+          class="map-item"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.6296389356044!2d30.32212272883606!3d59.938287541277234!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8403eb878242dbd5!2z0JTQvtGF0L7QtNC90YvQuSDQtNC-0Lwg0J0uINCQLiDQnNC10LvRjNGG0LXRgNCw!5e0!3m2!1sru!2sua!4v1557044802093!5m2!1sru!2sua"
+          width="800"
+          height="365"
+          frameborder="0"
+          style="border:0"
+          allowfullscreen=""
+        ></iframe>
+      </section>
+    </section>
+    </main>
+    <footer class="footer">
+      <section class="footer__container">
+        <p class="footer-text">Copyright © 2018 UIXREX, All rights Reserved.</p>
+        <article class="footer__interactive">
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="#" class="social__link social__link--facebook">
+                <svg focusable="false" class="link-icon" width="12" height="19">
+                  <use xlink:href="#icon-face"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__link--twitter">
+                <svg focusable="false" class="link-icon" width="12" height="19">
+                  <use xlink:href="#icon-twi"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__link--insta">
+                <svg focusable="false" class="link-icon" width="12" height="19">
+                  <use xlink:href="#icon-inst"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__link--facebook">
+                <svg focusable="false" class="link-icon" width="12" height="19">
+                  <use xlink:href="#icon-face"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__link--twitter">
+                <svg focusable="false" class="link-icon" width="12" height="19">
+                  <use xlink:href="#icon-twi"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__link--insta">
+                <svg focusable="false" class="link-icon" width="12" height="19">
+                  <use xlink:href="#icon-inst"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </footer>
+    <script>
+      var navMain = document.querySelector(".navigation");
+      var navToggle = document.querySelector(".navigation__toggle");
+
+      navMain.classList.remove("navigation--nojs");
+
+      navToggle.addEventListener("click", function() {
+        if (navMain.classList.contains("navigation--closed")) {
+          navMain.classList.remove("navigation--closed");
+          navMain.classList.add("navigation--opened");
+        } else {
+          navMain.classList.add("navigation--closed");
+          navMain.classList.remove("navigation--opened");
+        }
+      });
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/svgxuse.min.js"></script>
+    <script src="js/svgforeverybody.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          loop: true,
+          nav: true,
+          autoplay: true,
+          autoplayTimeout: 4000,
+          autoplayHoverPause: true,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1
+            },
+            700: {
+              items: 2
+            },
+            1000: {
+              items: 3
+            }
+          }
+        });
+      });
+      $(".play").on("click", function() {
+        owl.trigger("play.owl.autoplay", [1000]);
+      });
+      $(".stop").on("click", function() {
+        owl.trigger("stop.owl.autoplay");
+      });
+    </script>
+  </body>
 </html>

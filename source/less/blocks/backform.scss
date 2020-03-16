@@ -83,6 +83,10 @@
   width: 100%;
   margin-top: 20px;
 }
+.backform_wrapper{
+  width: auto;
+  margin: 0;
+}
 @media (min-width: 768px) {
   .backform_description {
     width: 45%;
@@ -92,3 +96,13 @@
     max-width: 743px;
   }
 }
+
+@media (min-width: 1300px) {
+ .backform_wrapper{ 
+width: 1220px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;}
+ }

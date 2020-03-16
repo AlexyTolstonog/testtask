@@ -71,7 +71,13 @@
   line-height: 36px;
   position: relative;
 }
+
 .border_card-button {
+  width: 205px;
+  height: 55px;
+  border-radius: 27px;
+  margin-bottom: 17px;
+  padding: 7px 0px;
   color: #4085f6;
   background-color: #ffffff;
   border: 2px solid #226be2;
@@ -128,4 +134,26 @@
   border-right: 2px solid #4085f6;
   -webkit-transform: rotate(27deg);
   transform: rotate(27deg);
+}
+
+@media (min-width: 1300px) {
+  .border_cards {
+    width: 1220px;
+    margin-top: 21px;
+  }
+  .border_card {
+    width: 355px;
+    max-height: 470px;
+  }
+  .border_card-button {
+    width: 205px;
+    height: 55px;
+    border-radius: 27px;
+    border: 2px solid #226be2;
+    margin-bottom: 76px;
+    padding: 7px 0px;
+  }
+  .border_card-title {
+    margin: 64px 0 0 0;
+  }
 }

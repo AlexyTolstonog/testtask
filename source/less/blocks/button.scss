@@ -3,9 +3,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 218px;
-  height: 77px;
-  border-radius: 38px;
 }
 
 /* green button*/
@@ -36,4 +33,7 @@
     color: black;
     border: 2px solid white;
   }
+}
+
+@media (min-width: 1300px) {
 }
