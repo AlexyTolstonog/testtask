@@ -58,7 +58,7 @@
   line-height: 24px;
   letter-spacing: 0.08px;
 }
-.header__button{
+.header__button {
   width: 304px;
   height: 70px;
   border-radius: 50px;
@@ -97,6 +97,7 @@
   .header {
     width: 100%;
     margin-top: 0;
+    background: inherit;
   }
 
   .header__container {
@@ -104,6 +105,7 @@
     padding: 0 40px;
     margin: 0 auto;
     border: none;
+    background: inherit;
   }
 
   .header__container-linck-header {
