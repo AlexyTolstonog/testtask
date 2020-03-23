@@ -42,12 +42,26 @@ fieldset {
 }
 
 @media (min-width: 1300px) {
+  @keyframes animatedBackground {
+    0% {
+        background-position: -693px -3496px
+    }
+    100% {
+        background-position: -693px -2496px; /* анимируем свойство background-position */
+    }
+  }
   body {
     background: url(../img/bg-rownd.png) 1190px -263px no-repeat,
       url(../img/bg-ellipse.png) 822px 816px no-repeat,
       url(../img/bg-firstromb.png) -693px -2496px no-repeat;
+      animation: animatedBackground 2s linear;
   }
 }
 .main {
   min-width: 320px;
 }
+
+
+
+
+
