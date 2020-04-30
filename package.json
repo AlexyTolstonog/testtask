@@ -49,7 +49,7 @@
     "node": "8.15"
   },
   "dependencies": {
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "owl.carousel": "^2.3.4",
     "sass": "^1.26.3"
   }
